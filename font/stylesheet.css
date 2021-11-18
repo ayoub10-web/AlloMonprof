@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'Copyright Klim Type Foundry';
+    src: url('Sohne-Buch.eot');
+    src: url('Sohne-Buch.eot?#iefix') format('embedded-opentype'),
+        url('Sohne-Buch.woff2') format('woff2'),
+        url('Sohne-Buch.woff') format('woff'),
+        url('Sohne-Buch.ttf') format('truetype'),
+        url('Sohne-Buch.svg#Sohne-Buch') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Copyright Klim Type Foundry';
+    src: url('SohneBreit-Kraftig.eot');
+    src: url('SohneBreit-Kraftig.eot?#iefix') format('embedded-opentype'),
+        url('SohneBreit-Kraftig.woff2') format('woff2'),
+        url('SohneBreit-Kraftig.woff') format('woff'),
+        url('SohneBreit-Kraftig.ttf') format('truetype'),
+        url('SohneBreit-Kraftig.svg#SohneBreit-Kraftig') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Copyright Klim Type Foundry';
+    src: url('SohneBreit-Dreiviertelfett.eot');
+    src: url('SohneBreit-Dreiviertelfett.eot?#iefix') format('embedded-opentype'),
+        url('SohneBreit-Dreiviertelfett.woff2') format('woff2'),
+        url('SohneBreit-Dreiviertelfett.woff') format('woff'),
+        url('SohneBreit-Dreiviertelfett.ttf') format('truetype'),
+        url('SohneBreit-Dreiviertelfett.svg#SohneBreit-Dreiviertelfett') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Copyright Klim Type Foundry';
+    src: url('Sohne-Dreiviertelfett.eot');
+    src: url('Sohne-Dreiviertelfett.eot?#iefix') format('embedded-opentype'),
+        url('Sohne-Dreiviertelfett.woff2') format('woff2'),
+        url('Sohne-Dreiviertelfett.woff') format('woff'),
+        url('Sohne-Dreiviertelfett.ttf') format('truetype'),
+        url('Sohne-Dreiviertelfett.svg#Sohne-Dreiviertelfett') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Copyright Klim Type Foundry';
+    src: url('SohneBreit-Halbfett.eot');
+    src: url('SohneBreit-Halbfett.eot?#iefix') format('embedded-opentype'),
+        url('SohneBreit-Halbfett.woff2') format('woff2'),
+        url('SohneBreit-Halbfett.woff') format('woff'),
+        url('SohneBreit-Halbfett.ttf') format('truetype'),
+        url('SohneBreit-Halbfett.svg#SohneBreit-Halbfett') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

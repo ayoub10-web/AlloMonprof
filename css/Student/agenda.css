@@ -1,0 +1,688 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Söhne";
+  src: url("/font/Sohne-Buch.eot");
+  src: url("/font/Sohne-Buch.eot?#iefix") format("embedded-opentype"), url("/font/Sohne-Buch.woff2") format("woff2"), url("/font/Sohne-Buch.woff") format("woff"), url("/font/Sohne-Buch.ttf") format("truetype"), url("/font/Sohne-Buch.svg#Sohne-Buch") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Söhne";
+  src: url("/font/SohneBreit-Kraftig.eot");
+  src: url("/font/SohneBreit-Kraftig.eot?#iefix") format("embedded-opentype"), url("/font/SohneBreit-Kraftig.woff2") format("woff2"), url("/font/SohneBreit-Kraftig.woff") format("woff"), url("/font/SohneBreit-Kraftig.ttf") format("truetype"), url("/font/SohneBreit-Kraftig.svg#SohneBreit-Kraftig") format("svg");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Söhne";
+  src: url("/font/SohneBreit-Dreiviertelfett.eot");
+  src: url("/font/SohneBreit-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("/font/SohneBreit-Dreiviertelfett.woff2") format("woff2"), url("/font/SohneBreit-Dreiviertelfett.woff") format("woff"), url("/font/SohneBreit-Dreiviertelfett.ttf") format("truetype"), url("/font/SohneBreit-Dreiviertelfett.svg#SohneBreit-Dreiviertelfett") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Söhne";
+  src: url("/font/Sohne-Dreiviertelfett.eot");
+  src: url("/font/Sohne-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("/font/Sohne-Dreiviertelfett.woff2") format("woff2"), url("/font/Sohne-Dreiviertelfett.woff") format("woff"), url("/font/Sohne-Dreiviertelfett.ttf") format("truetype"), url("/font/Sohne-Dreiviertelfett.svg#Sohne-Dreiviertelfett") format("svg");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Söhne";
+  src: url("/font/SohneBreit-Halbfett.eot");
+  src: url("/font/SohneBreit-Halbfett.eot?#iefix") format("embedded-opentype"), url("/font/SohneBreit-Halbfett.woff2") format("woff2"), url("/font/SohneBreit-Halbfett.woff") format("woff"), url("/font/SohneBreit-Halbfett.ttf") format("truetype"), url("/font/SohneBreit-Halbfett.svg#SohneBreit-Halbfett") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* colors */
+* {
+  outline: none !important;
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Söhne";
+}
+
+body .sidebar {
+  width: 15%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  z-index: 999;
+}
+
+body .sidebar .logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+body .sidebar .logo img {
+  margin: 10%;
+}
+
+body .sidebar .menu {
+  width: 100%;
+}
+
+body .sidebar .menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  list-style: none;
+  padding: 0;
+  margin-top: 10%;
+  width: 100%;
+}
+
+body .sidebar .menu ul li {
+  width: 100%;
+  padding-left: 10%;
+  border-left: 0.3vw solid white;
+}
+
+body .sidebar .menu ul li a {
+  text-decoration: none;
+  width: 100%;
+}
+
+body .sidebar .menu ul li a h2 {
+  font-size: 1vw;
+  font-weight: bold;
+  color: #ababab;
+  line-height: 2vw;
+}
+
+body .sidebar .menu ul li a h2:hover {
+  color: #6400e4;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .sidebar .menu ul li:hover {
+  border-left: 0.3vw solid #6400e4;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .sidebar .menu ul .active {
+  border-left: 0.3vw solid #6400e4;
+}
+
+body .sidebar .menu ul .active h2 {
+  color: #6400e4;
+}
+
+body .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 85%;
+  float: right;
+}
+
+body .right .top {
+  width: 85%;
+  padding: 0.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  border-left: 2px solid #f7f2fd;
+  top: 0;
+  right: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: white;
+  z-index: 999;
+}
+
+body .right .top .form {
+  width: 75%;
+}
+
+body .right .top .form .input-group span {
+  border: none;
+  background-color: #f7f2fd;
+}
+
+body .right .top .form input {
+  font-size: 0.8vw;
+  font-weight: 500;
+  background-color: #f7f2fd;
+  border: none;
+}
+
+body .right .top .form input::-webkit-input-placeholder {
+  color: #ababab;
+}
+
+body .right .top .form input:-ms-input-placeholder {
+  color: #ababab;
+}
+
+body .right .top .form input::-ms-input-placeholder {
+  color: #ababab;
+}
+
+body .right .top .form input::placeholder {
+  color: #ababab;
+}
+
+body .right .top .notifications {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 20%;
+}
+
+body .right .top .notifications ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 35%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right .top .notifications ul li a img {
+  width: 100%;
+}
+
+body .right .top .notifications button {
+  height: 90%;
+  width: 45%;
+  color: #6400e4;
+  font-size: 0.7vw;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  background-color: #ffd500;
+}
+
+body .right .top .profile {
+  width: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right .top .profile a {
+  margin-right: 10%;
+}
+
+body .right .top .profile a img {
+  width: 100%;
+}
+
+body .right .content {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .right .content .current {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 6%;
+  padding-left: 2%;
+}
+
+body .right .content .current img {
+  margin-right: 0.6%;
+}
+
+body .right .content .current h2 {
+  margin-left: 0;
+  color: #1A1C21;
+  font-size: 1.7vw;
+  font-weight: bold;
+}
+
+body .right .content .controles {
+  width: 80%;
+  height: 2vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 2%;
+  position: relative;
+  margin-bottom: 1%;
+  margin-top: 2%;
+}
+
+body .right .content .controles .swiper-pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body .right .content .controles .swiper-pagination span {
+  width: 5vw;
+  height: 100%;
+  border-radius: 0;
+  background-color: #f7f2fd !important;
+  margin-right: 2%;
+  font-size: 1vw;
+}
+
+body .right .content .controles .swiper-pagination .swiper-pagination-bullet-active {
+  color: #6400e4;
+  border-bottom: 0.18vw solid #6400e4;
+}
+
+body .right .content .container1 {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin-bottom: 10%;
+}
+
+body .right .content .container1 .left {
+  width: 70%;
+}
+
+body .right .content .container1 .left #calendar {
+  width: 100%;
+  height: auto;
+  border-color: #f7f2fd !important;
+}
+
+body .right .content .container1 .left #calendar ::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  /* make scrollbar transparent */
+}
+
+body .right .content .container1 .left #calendar .fc-toolbar-chunk button {
+  background-color: #f7f2fd;
+  border-radius: 50%;
+  padding: 0.5vw !important;
+  border: none;
+}
+
+body .right .content .container1 .left #calendar .fc-toolbar-chunk button span {
+  color: #6400e4;
+}
+
+body .right .content .container1 .left #calendar .fc-timegrid-slot-label {
+  vertical-align: top;
+}
+
+body .right .content .container1 .left #calendar .fc-scrollgrid {
+  border-color: #f7f2fd;
+}
+
+body .right .content .container1 .left #calendar td, body .right .content .container1 .left #calendar tr, body .right .content .container1 .left #calendar th {
+  height: 4vw;
+  border-color: #f7f2fd !important;
+}
+
+body .right .content .container1 .left #calendar .fc-day-today {
+  background-color: #F7F2FD !important;
+}
+
+body .right .content .container1 .left #calendar .fc-v-event {
+  background-color: #F1FAF6;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+body .right .content .container1 .left #calendar .fc-event-main {
+  color: #6ECCA9;
+  font-size: 1vw;
+  font-weight: bold;
+  height: 100%;
+  width: 100%;
+}
+
+body .right .content .container1 .left #calendar .fc-timegrid-slot-label-frame {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+body .right .content .container1 .left #calendar .fc-timegrid-slot-label-frame .time {
+  font-size: 0.7vw;
+  font-weight: 500;
+  color: #ababab;
+}
+
+body .right .content .container1 .left #calendar .fc-col-header-cell .fc-day .fc-day-wed .fc-day-today {
+  background-color: red !important;
+}
+
+body .right .content .container1 .left #calendar .fc-scrollgrid-sync-inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+body .right .content .container1 .left #calendar .fc-scrollgrid-sync-inner a {
+  text-decoration: none;
+  color: #ababab;
+  font-size: 0.7vw;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+body .right .content .container1 .left #calendar .fc-license-message {
+  display: none;
+}
+
+body .right .content .container1 .left #calendar .day {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+body .right .content .container1 .left #calendar .day span {
+  color: #1A1C21;
+  font-size: 1.5vw;
+  font-weight: bold;
+}
+
+body .right .content .container1 .right {
+  width: 25%;
+  margin-top: -10%;
+}
+
+body .right .content .container1 .right .box {
+  background-color: white;
+  margin-bottom: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  padding: 15% 0 15% 0;
+}
+
+body .right .content .container1 .right .box .form {
+  width: 100%;
+  margin-bottom: 5%;
+}
+
+body .right .content .container1 .right .box .form .input-group span {
+  border: none;
+  background-color: #f7f2fd;
+}
+
+body .right .content .container1 .right .box .form input {
+  font-size: 0.8vw;
+  font-weight: 500;
+  background-color: #f7f2fd;
+  height: 3vw;
+  border: none;
+}
+
+body .right .content .container1 .right .box .form input::-webkit-input-placeholder {
+  color: #ababab;
+}
+
+body .right .content .container1 .right .box .form input:-ms-input-placeholder {
+  color: #ababab;
+}
+
+body .right .content .container1 .right .box .form input::-ms-input-placeholder {
+  color: #ababab;
+}
+
+body .right .content .container1 .right .box .form input::placeholder {
+  color: #ababab;
+}
+
+body .right .content .container1 .right .box #datepicker {
+  width: 100%;
+}
+
+body .right .content .container1 .right .box #datepicker .datepicker {
+  width: 100%;
+}
+
+body .right .content .container1 .right .box #datepicker .datepicker table {
+  width: 100%;
+}
+
+body .right .content .container1 .right .box #datepicker .datepicker table th {
+  font-size: 0.8vw;
+  color: #ababab;
+  font-weight: 500;
+}
+
+body .right .content .container1 .right .box #datepicker .datepicker table .day {
+  font-size: 0.8vw;
+  font-weight: 500;
+  color: #1A1C21;
+  padding: 2%;
+}
+
+body .right .content .container1 .right .box #datepicker .datepicker table .day:hover {
+  background-color: #6400e4;
+  color: white;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+body .right .content .container1 .right .box #datepicker .datepicker table .old {
+  color: #ababab;
+}
+
+body .right .content .container1 .right .box #datepicker .datepicker table .new {
+  color: #ababab;
+}
+
+body .right .content .container1 .right .box #datepicker .datepicker table .today {
+  background-color: #6400e4;
+  color: white;
+  background-image: none;
+}
+
+body .right .content .container1 .right .box .image {
+  width: 100%;
+}
+
+body .right .content .container1 .right .box .image img {
+  width: 40%;
+}
+
+body .right .content .container1 .right .box h2 {
+  font-size: 1.1vw;
+  margin-bottom: 3%;
+  color: #6400e4;
+  margin-top: 3%;
+  font-weight: bold;
+}
+
+body .right .content .container1 .right .box p {
+  font-size: 0.7vw;
+  color: #ababab;
+  width: 75%;
+  margin-bottom: 3%;
+}
+
+body .right .content .container1 .right .box button {
+  color: #6400e4;
+  height: 2.5vw;
+  width: 50%;
+  background-color: #ffd500;
+  font-size: 0.7vw;
+  border: none;
+  border-radius: 5px;
+}
+
+body .right .content .container1 .right .course {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right .content .container1 .right .course .text {
+  width: 100%;
+  padding: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .right .content .container1 .right .course .text h2 {
+  font-size: 1.1vw;
+  font-weight: normal;
+  margin: 0;
+}
+
+body .right .content .container1 .right .course .container-course {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #f7f2fd;
+  width: 85%;
+  margin-bottom: 7%;
+  padding: 7%;
+  border-left: 0.5vw solid #6ECCA9;
+  border-radius: 5px;
+}
+
+body .right .content .container1 .right .course .container-course .image {
+  width: 70%;
+}
+
+body .right .content .container1 .right .course .container-course .image p {
+  font-size: 0.6vw;
+  margin: 0;
+  color: #ababab;
+}
+
+body .right .content .container1 .right .course .container-course .image h3 {
+  font-size: 1vw;
+  font-weight: bold;
+  margin-top: 5%;
+}
+
+body .right .content .container1 .right .course .container-course .day {
+  width: 30%;
+}
+
+body .right .content .container1 .right .course .container-course .day .box {
+  background-color: #6ECCA9;
+  border-radius: 5px;
+}
+
+body .right .content .container1 .right .course .container-course .day .box h2, body .right .content .container1 .right .course .container-course .day .box p {
+  color: white;
+}
+/*# sourceMappingURL=agenda.css.map */

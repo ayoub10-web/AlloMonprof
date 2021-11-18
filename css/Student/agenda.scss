@@ -1,0 +1,575 @@
+@font-face {
+    font-family: "Söhne";
+    src: url("/font/Sohne-Buch.eot");
+    src: url("/font/Sohne-Buch.eot?#iefix") format("embedded-opentype"), url("/font/Sohne-Buch.woff2") format("woff2"), url("/font/Sohne-Buch.woff") format("woff"), url("/font/Sohne-Buch.ttf") format("truetype"), url("/font/Sohne-Buch.svg#Sohne-Buch") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("/font/SohneBreit-Kraftig.eot");
+    src: url("/font/SohneBreit-Kraftig.eot?#iefix") format("embedded-opentype"), url("/font/SohneBreit-Kraftig.woff2") format("woff2"), url("/font/SohneBreit-Kraftig.woff") format("woff"), url("/font/SohneBreit-Kraftig.ttf") format("truetype"), url("/font/SohneBreit-Kraftig.svg#SohneBreit-Kraftig") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("/font/SohneBreit-Dreiviertelfett.eot");
+    src: url("/font/SohneBreit-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("/font/SohneBreit-Dreiviertelfett.woff2") format("woff2"), url("/font/SohneBreit-Dreiviertelfett.woff") format("woff"), url("/font/SohneBreit-Dreiviertelfett.ttf") format("truetype"), url("/font/SohneBreit-Dreiviertelfett.svg#SohneBreit-Dreiviertelfett") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("/font/Sohne-Dreiviertelfett.eot");
+    src: url("/font/Sohne-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("/font/Sohne-Dreiviertelfett.woff2") format("woff2"), url("/font/Sohne-Dreiviertelfett.woff") format("woff"), url("/font/Sohne-Dreiviertelfett.ttf") format("truetype"), url("/font/Sohne-Dreiviertelfett.svg#Sohne-Dreiviertelfett") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("/font/SohneBreit-Halbfett.eot");
+    src: url("/font/SohneBreit-Halbfett.eot?#iefix") format("embedded-opentype"), url("/font/SohneBreit-Halbfett.woff2") format("woff2"), url("/font/SohneBreit-Halbfett.woff") format("woff"), url("/font/SohneBreit-Halbfett.ttf") format("truetype"), url("/font/SohneBreit-Halbfett.svg#SohneBreit-Halbfett") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* colors */
+
+$black: #000000;
+$purpel: #6400e4;
+$white: #ffffff;
+$yallow: #ffd500;
+$gray: #ababab;
+$dark-grey: #585858;
+$grey2: #e8dafa;
+$lightgrey: #f7f2fd;
+$lightgrey2:#E8DAFA;
+$lightpurpel: #c20094;
+$fushia:#7444BE;
+$menugrey:#E8DAFA;
+$back-color:#F9F9F9;
+$shark:#1A1C21;
+$facebook: #3B5998;
+$input-grey:#F7F7F7;
+$greeny:#6ECCA9;
+$lightgreen:#F1FAF6;
+
+* {
+    outline: none !important;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Söhne";
+
+
+
+}
+
+
+
+body{
+        .sidebar{
+            width: 15%;
+            height: 100%;
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            z-index: 999;
+  
+            .logo{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                img{
+                    margin: 10%;
+                }
+  
+            }
+            .menu{
+                width: 100%;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    list-style: none;
+                    padding: 0;
+                    margin-top: 10%;
+                    width: 100%;
+                    li{
+                        width: 100%;
+                        padding-left: 10%;
+                        border-left: 0.3vw solid white;
+
+        
+                        a{
+                            text-decoration: none;
+                            
+                            width: 100%;
+                            h2{
+                                font-size: 1vw;
+                                font-weight: bold;
+                                color: $gray;
+                                line-height: 2vw;
+                                &:hover{
+                                    color: $purpel;
+                                    transition: 0.3s ease-in-out;
+
+                                }
+                                
+                            }
+                        }
+                        &:hover{
+                            border-left: 0.3vw solid $purpel;
+                            transition: 0.3s ease-in-out;
+
+                        }
+                    }
+                    .active{
+                    border-left: 0.3vw solid $purpel;
+                    h2{
+                        color: $purpel;
+                    }
+                    }  
+
+                }
+            }
+
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            float: right;
+
+
+            .top{
+                width: 85%;
+                padding: 0.5%;
+                display: flex;
+                position: fixed;
+                border-left: 2px solid $lightgrey;
+                top: 0;
+                right: 0;
+                justify-content: space-between;
+                background-color: white;
+                z-index: 999;
+                .form{
+                    width: 75%;
+                    .input-group{
+                        span{
+                            border: none;
+                            background-color: $lightgrey;
+                            img{
+    
+                            }
+                        }
+                    }
+                    input{
+                        font-size: 0.8vw;
+                        font-weight: 500;
+                        background-color: $lightgrey;
+                        border: none;
+                        &::placeholder{
+                            color: $gray;
+                        }
+                    }
+                }
+    
+                .notifications{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 20%;
+                    ul{
+                        display: flex;
+                        width: 35%;
+                        justify-content: space-around;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        align-items: center;
+                        li{
+                            a{
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    button{
+                        height: 90%;
+                        width: 45%;
+                        color: $purpel;
+                        font-size: 0.7vw;
+                        font-weight: bold;
+                        border: none;
+                        border-radius: 5px;
+                        background-color: $yallow;
+                
+                    }
+                }
+                .profile{
+                    width: 5%;
+                    display: flex;
+                    align-items: center;
+                    a{
+                        margin-right: 10%;
+    
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .content{
+                width: 100%; 
+                display: flex;
+                flex-direction: column;
+                .current{
+                    width: 100%;
+                    display: flex;
+                    padding-top: 6%;
+                    padding-left: 2%;
+                    img{
+                        margin-right: 0.6%;
+                    }
+                    h2{
+                        margin-left: 0;
+                        color: $shark;
+                        font-size: 1.7vw;
+                        font-weight: bold;
+                    }
+
+
+                }
+
+                .controles{
+                    width: 80%;
+                    height: 2vw;
+                    display: flex;
+                    margin-left: 2%;
+                    position: relative;
+                    margin-bottom: 1%;
+                    margin-top: 2%;
+                    .swiper-pagination{
+                        display: flex;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        span{
+                            width: 5vw;
+                            height: 100%;
+                            border-radius: 0;
+                            background-color: $lightgrey !important;
+                            margin-right: 2%;
+                            font-size: 1vw;
+                            
+                        }
+                        .swiper-pagination-bullet-active{
+                            color: $purpel;
+                            border-bottom: 0.18vw solid $purpel;
+                   
+                        }
+                    }                    
+                }
+
+                .container1{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content:space-evenly;
+                    margin-bottom: 10%;
+
+
+                    .left{
+                        width: 70%;
+                        #calendar{
+                            width: 100%;
+                            height: auto;
+                            border-color: $lightgrey !important;
+                            ::-webkit-scrollbar {
+                                width: 0;
+                                background: transparent; /* make scrollbar transparent */
+                            }
+                            //controles //
+                            .fc-toolbar-chunk{
+                                button{
+                                    background-color: $lightgrey;
+                                    border-radius: 50%;
+                                    padding: 0.5vw !important;
+                                    border: none;
+                                    span{
+                                        color: $purpel;
+                                    }
+                                }
+                            }
+                            .fc-timegrid-slot-label{
+                                vertical-align: top;
+                                // border: none;
+                            }     
+                            .fc-timegrid-axis{
+                            } 
+                            .fc-scrollgrid {
+                                // border-left: none;
+                                border-color: $lightgrey;
+                            }     
+                            td,tr,th{
+                                height: 4vw;
+                                border-color: $lightgrey !important;
+
+                            }
+                            
+                            .fc-day-today {
+                                background-color: #F7F2FD !important;
+                            }
+                            .fc-v-event{
+                                background-color: $lightgreen;
+                                width: 100%;
+                                height: 100%;
+                                border: none;
+                            }
+                            
+                            .fc-event-main{
+                                color:$greeny;
+                                font-size: 1vw;
+                                font-weight: bold;
+                                height: 100%;
+                                width: 100%;
+                            }
+           
+                            .fc-timegrid-slot-label-frame{
+                                display: flex;
+                                justify-content: center;
+                                align-items: flex-start;
+                                .time{
+                                    font-size: 0.7vw;
+                                    font-weight: 500;
+                                    color: $gray;
+                                }
+                            }
+                            .fc-col-header-cell{
+                                .fc-day{
+                                    .fc-day-wed{
+                                        .fc-day-today{
+                                            background-color: red !important;
+
+                            }} } 
+                            }
+
+                            .fc-scrollgrid-sync-inner{
+                                display: flex;
+                                justify-content: flex-start;
+                                a{
+                                    text-decoration: none;
+                                    color: $gray;
+                                    font-size: 0.7vw;
+                                    font-weight: 500;
+                                    text-transform: uppercase;
+                                }
+                            }
+                            .fc-license-message{
+                                display: none;
+                            }
+                            .day{
+                                width: 100%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: flex-start;
+                                justify-content: space-around;
+
+                                span{
+                                    color:$shark;
+                                    font-size: 1.5vw;
+                                    font-weight: bold;
+                                }
+                            }
+
+                        }
+
+                    } 
+                    .right{
+                        width: 25%;
+                        margin-top: -10%;
+                        .box{
+                            background-color: white;
+                            margin-bottom: 5%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-around;
+                            text-align: center;
+                            padding: 15% 0 15% 0;
+                            .form{
+                                width: 100%;
+                                margin-bottom: 5%;
+                                .input-group{
+                                    span{
+                                        border: none;
+                                        background-color: $lightgrey;
+                                        img{
+                
+                                        }
+                                    }
+                                }
+                                input{
+                                    font-size: 0.8vw;
+                                    font-weight: 500;
+                                    background-color: $lightgrey;
+                                    height: 3vw;
+                                    border: none;
+                                    &::placeholder{
+                                        color: $gray;
+                                    }
+                                }
+                            }
+                            #datepicker{
+                                width: 100%;
+                                .datepicker{
+                                    width: 100%;
+                                    table{
+                                        width: 100%;
+                                        th{
+                                            font-size:0.8vw;
+                                            color: $gray;
+                                            font-weight: 500;
+                                        }
+                                            .day{
+                                                font-size: 0.8vw;
+                                                font-weight: 500;
+                                                color: $shark;
+                                                padding: 2%;
+                                                &:hover{
+                                                    background-color: $purpel;
+                                                    color: white;
+                                                    transition: 0.3s ease-in-out;
+                                                }
+                                            }
+                                            .old{
+                                                color: $gray;
+                                            }
+                                            .new{
+                                                color: $gray;
+                                            }
+                                            .today{
+                                                background-color: $purpel;
+                                                color: white;
+                                                background-image: none;
+                                            }
+     
+
+                                    }
+                                }
+ 
+              
+                            }
+                            .image{
+                                width: 100%;
+
+                                img{
+                                    width: 40%;
+                                }
+                            }
+                            h2{
+                                font-size: 1.1vw;
+                                margin-bottom: 3%;
+                                color: $purpel;
+                                margin-top: 3%;
+                                font-weight: bold;
+                            }
+                            p{
+                                font-size: 0.7vw;
+                                color: $gray;
+                                width: 75%;
+                                margin-bottom: 3%;
+                            }
+                            button{
+                                color: $purpel;
+                                height: 2.5vw;
+                                width: 50%;
+                                background-color: $yallow;
+                                font-size: 0.7vw;
+                                border: none;
+                                border-radius: 5px;
+                            }
+                        }
+                        .course{
+                            background-color: white;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .text{
+                                width: 100%;
+                                padding: 5%;
+                                display: flex;
+                                align-items: center;
+                                h2{
+                                    font-size: 1.1vw;
+                                    font-weight: normal;
+                                    margin: 0;
+                                }
+                           
+                            }
+                            .container-course{
+                                display: flex;
+                                align-items: center;
+                                background-color: $lightgrey;
+                                width: 85%;
+                                margin-bottom: 7%;
+                                padding: 7%;
+                                border-left: 0.5vw solid $greeny;
+                                border-radius: 5px;
+                                .image{
+                                    width: 70%;
+                                    p{
+                                        font-size: 0.6vw;
+                                        margin: 0;
+                                        color: $gray;
+                                    }
+                                    h3{
+                                        font-size: 1vw;
+                                        font-weight: bold;
+                                        margin-top: 5%;
+                                    }
+                                }
+                                .day{
+                                    width: 30%;
+                                    .box{
+                                        background-color: $greeny;
+                                        border-radius: 5px;
+                                        h2,p{
+                                            color: white;
+                                        }
+                                    }
+                                }
+            
+                                
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+    
+    
+}

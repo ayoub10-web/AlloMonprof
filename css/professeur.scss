@@ -1,0 +1,911 @@
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/Sohne-Buch.eot");
+    src: url("../font/Sohne-Buch.eot?#iefix") format("embedded-opentype"), url("../font/Sohne-Buch.woff2") format("woff2"), url("../font/Sohne-Buch.woff") format("woff"), url("../font/Sohne-Buch.ttf") format("truetype"), url("../font/Sohne-Buch.svg#Sohne-Buch") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/SohneBreit-Kraftig.eot");
+    src: url("../font/SohneBreit-Kraftig.eot?#iefix") format("embedded-opentype"), url("../font/SohneBreit-Kraftig.woff2") format("woff2"), url("../font/SohneBreit-Kraftig.woff") format("woff"), url("../font/SohneBreit-Kraftig.ttf") format("truetype"), url("../font/SohneBreit-Kraftig.svg#SohneBreit-Kraftig") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/SohneBreit-Dreiviertelfett.eot");
+    src: url("../font/SohneBreit-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("../font/SohneBreit-Dreiviertelfett.woff2") format("woff2"), url("../font/SohneBreit-Dreiviertelfett.woff") format("woff"), url("../font/SohneBreit-Dreiviertelfett.ttf") format("truetype"), url("../font/SohneBreit-Dreiviertelfett.svg#SohneBreit-Dreiviertelfett") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/Sohne-Dreiviertelfett.eot");
+    src: url("../font/Sohne-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("../font/Sohne-Dreiviertelfett.woff2") format("woff2"), url("../font/Sohne-Dreiviertelfett.woff") format("woff"), url("../font/Sohne-Dreiviertelfett.ttf") format("truetype"), url("../font/Sohne-Dreiviertelfett.svg#Sohne-Dreiviertelfett") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/SohneBreit-Halbfett.eot");
+    src: url("../font/SohneBreit-Halbfett.eot?#iefix") format("embedded-opentype"), url("../font/SohneBreit-Halbfett.woff2") format("woff2"), url("../font/SohneBreit-Halbfett.woff") format("woff"), url("../font/SohneBreit-Halbfett.ttf") format("truetype"), url("../font/SohneBreit-Halbfett.svg#SohneBreit-Halbfett") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* colors */
+
+$black: #000000;
+$purpel: #6400e4;
+$white: #ffffff;
+$yallow: #ffd500;
+$gray: #ababab;
+$dark-grey: #585858;
+$grey2: #e8dafa;
+$lightgrey: #f7f2fd;
+$lightgrey2:#E8DAFA;
+$lightpurpel: #c20094;
+$fushia:#7444BE;
+$menugrey:#E8DAFA;
+$back-color:#F9F9F9;
+$shark:#1A1C21;
+
+* {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Söhne";
+
+
+}
+body{
+    background-color: $back-color !important;
+    position: relative;
+    .fillheader{
+        transition: 0.5s ease-in-out;
+        background-color: $fushia;
+    }  
+
+    .header{
+        display: flex;
+        position: fixed;
+        height: 8vh;
+        width: 100%;
+        z-index: 99999;
+        .logo{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 2%;
+            img{
+                height: 50%;
+            }
+        }
+        .menu{
+            width:100%;
+            display: flex;
+            justify-content: flex-end;
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                list-style-type: none;
+                height: 100%;
+                width: 80%;
+                margin-right: 3%;
+                li{
+                    a{
+                        text-decoration: none;
+                        color: white;
+                        font-size: 0.9vw;
+                        padding: 5px 10px 5px 10px;
+                        border-radius: 15px;
+                        &:hover{
+                            background-color: rgba($color: $white, $alpha: 0.2);
+                            transition: 0.3s ease-in-out;
+                        }
+ 
+                    }
+                    .active{
+                        background-color: rgba($color: $white, $alpha: 0.2);
+
+                    }
+                }
+            }
+        }
+    }
+    .container1{
+        background-color: $purpel;
+        border-radius: 0 0 50% 50% / 0 0 15% 15%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        
+        .image{
+            width: 100%;
+
+            img{
+                width: 100%;
+                border-radius: 0 0 50% 50% / 0 0 15% 15%;
+
+            }
+        }
+        .wrapper{
+            position: absolute;
+            left: 0;
+            width: 100%;
+            .container2{
+                padding-top: 7%;
+                // position: absolute;
+                display: flex;
+                flex-direction: column;
+ 
+                // left: 0;
+                width: 80%;
+                margin: 0 10% 0 10%;
+                .prof{
+                    display: flex;
+                        div:nth-child(1){
+                            display: flex;
+                            width: 100%;
+                        
+                                .image{
+                                    width: 35%;
+                                    display: flex;
+                                    justify-content: center;
+                                    img{
+                                        width: 90%;
+                                    }
+                                }
+                                .details{
+                                    display: flex;
+                                    flex-direction: column;
+                                    justify-content: center;
+                                    width: 65%;
+                                    color: white;
+                                    p{
+                                        font-size: 1vw;
+                                        font-weight:bold;
+                                    }
+                                    h1{
+                                        font-size: 2.5vw;
+                                        font-weight: bold;
+                                    }
+                                    a{
+                                        font-size: 0.8vw;
+                                        font-weight:bold;
+                                        background-color: rgba(232, 218, 250, 0.2);
+                                    
+                                        color: $yallow;
+                                        width: max-content;
+                                        padding: 1%;
+                                        border-radius: 30px;
+                                    }
+                                    .icons{
+                                        margin-top: 3%;
+                                        img{
+                                            margin-right: 3%;
+                                        }
+                                    }
+                                }
+                            
+                        }
+                        div:nth-child(2){
+                            width: 100%;
+                            display: flex;
+                            justify-content: flex-end;
+                            .button{
+                                width: 50%;
+                                height: 80%;
+                                display: flex;
+                                flex-direction: column;
+                                align-items: center;
+                                justify-content: center;
+                                text-align: center;
+                                h1{
+                                    width: 60%;
+                                    font-size: 2vw;
+                                    color: white;
+                                    
+    
+                                }
+                                button{
+                                    height: 40%;
+                                    width: 50%;
+                                    background-color: $yallow;
+                                    border: none;
+                                    border-radius: 5px;
+                                    color: $purpel;
+
+                                }
+                            }
+                            
+
+                        }
+                }
+                .info{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 3%;
+                    .left{
+                        width: 32.5%;
+                        border-radius: 10px;
+                        z-index: 999;
+                        .box{
+                            background-color: white;
+                            margin-bottom: 3%;
+                            padding: 5% 10% 5% 10%;
+                            
+                        }
+                        .box1{
+                            display: flex;
+                            flex-direction: column;
+                            border-radius: 10px;
+
+                            div:nth-child(1){
+                                height: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                border-bottom: 1.5px solid #F0F0F0;
+                                padding-bottom: 6%;
+                                h1{
+                                    font-size: 1.1vw;
+                                    font-weight: bold;
+                                    color: black;
+                                    margin: 0;
+                                }
+                                div{
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    img{
+                                        float: left;
+                                    }
+                                }
+
+
+                            }
+                            div:nth-child(2){
+                                height: 100%;
+                                display: flex;
+                                justify-content: space-between;
+                                align-items: center;
+                                padding-top: 4%;
+
+                                h1{
+                                    font-size: 1.1vw;
+                                    font-weight: bold;
+                                    color: black;
+                                    margin: 0;
+
+                                }
+                                div{
+                                    height: 100%;
+                                    display: flex;
+                                    justify-content: flex-end;
+                                    h1{
+                                        color: $purpel;
+                                        margin: 0;
+
+                                    }
+                                    img{
+                                        margin-left: 10%;
+                                                                             }
+                                }
+
+                            }
+                        }
+                        .box2{
+                            border-radius: 10px;
+                            p{
+                                font-size: 1vw;
+                                font-weight: bold;
+                                color: $dark-grey;
+                            }
+                            div{
+                                display: flex;
+                                flex-wrap: wrap;
+                                margin-bottom: 5%;
+                                a{
+                                    font-size: 0.9vw;
+                                    text-decoration: none;
+                                    color: $purpel;
+                                    background-color: rgba(232, 218, 250, 0.25);
+                                    padding: 1% 3% 1% 3%;
+                                    margin-right: 2%;
+                                    margin-bottom: 2%;
+                                    border-radius: 25px;
+
+                                }
+                            }
+                        }
+                        .feedback{
+                            display: flex;
+                            flex-direction: column;
+                            h1{
+                                font-size: 1vw;
+                                font-weight: bold;
+                                color: $purpel;
+                        
+                            }
+                                .review{
+                                    display: flex;
+                                    width: 100%;
+                                    .rating{
+                                        width: 35%;
+                                        text-align: center;
+                                        h1{
+                                            font-size: 5vw;
+                                        }
+                                        ul{
+                                            display: flex;
+                                            list-style: none;
+                                            justify-content: center;
+                                            margin: 0;
+                                            padding: 0;
+                                           font-size: 0.7rem;
+                                            li{
+                                                
+                                                i{
+                                                    color: $yallow;
+                                                }
+                             
+                                            }
+                                        }
+                                        p{
+                                            font-size: 0.8vw;
+                                            color: $dark-grey;
+                                        }
+
+                                    }
+                                    .stars{
+                                        width: 65%;
+                                        .rate{
+                                            display: flex;
+                                            margin-bottom: 3%;
+                                            .score{
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                width: 50%;
+                                                margin-right: 5%;
+                                                margin-left: 5%;
+                                                .value{
+                                                position: relative;
+                                                width: 100%;
+                                                background-color: $gray;
+                                                height: 20%;
+                                                .bg{
+                                                    position: absolute;
+                                                    height: 100%;
+                                                    top: 0;
+                                                    left: 0;
+                                                    background-color: $purpel;
+                                                }
+                                                }
+
+                                            }
+                                            ul{
+                                                width: 40%;
+                                                display: flex;
+                                                align-items: center;
+                                                list-style: none;
+                                                font-size: 0.7rem;
+                                                margin: 0;
+                                                padding: 0;
+                                                li{
+                                                    padding-right: 2%;
+                                        
+                                                    i{
+                                                        color: $yallow;
+                        
+                                                       
+
+                                                    }
+                                                    .fa-star-half{
+                                                    }
+                                                    p{
+                                                        margin-left: 10%;
+                                                        color: $dark-grey;
+                                                        margin-bottom: 0;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .rate1{
+                                            .score{
+                                                .value{
+                                                    .bg{
+                                                        width: 80%;
+                                                    }
+                                                }
+                                            }
+ 
+                                        }
+                                        .rate2{
+                                            .bg{
+                                                width: 38%;
+                                            }
+                                        }
+                                        .rate3{
+                                            .bg{
+                                                width: 4%;
+                                            }
+                                        }
+                                        .rate4{
+                                            .bg{
+                                                width: 4%;
+                                            }
+                                        }
+                                        .rate5{
+                                            .bg{
+                                                width: 4%;
+                                            }
+                                        }
+
+                                    }
+                                }
+                                .prof_review{
+                                    display: flex;
+                                    flex-direction: column;
+                                    margin-bottom: 5%;
+                                    ul{
+                                        display: flex;
+                                        list-style: none;
+                                        margin: 0;
+                                        padding: 0;
+                                        font-size: 0.7rem;
+                                        margin-bottom: 3%;
+                                        li{
+                                            i{
+                                                color: $yallow;
+                                            }
+                                        }
+                                    }
+                                    p{
+                                        color: $dark-grey;
+                                        font-size: 0.8vw;
+                                        font-weight: 500;
+                                        opacity: 0.8;
+
+                                    }
+                                    .bottom{
+                                        display: flex;
+                                        
+                                        div:nth-child(1){
+                                            width: 70%;
+                                            display: flex;
+                                            align-items: center;
+                            
+                                                img{
+                                                    width: auto;
+                                                }
+                                                p{
+                                                    font-size: 0.7vw;
+                                                    padding: 0;
+                                                    margin: 0;
+                                                    margin-left: 2%;
+                                                    font-weight: bold;
+                                                    color: $shark !important;
+                                                                                                        color: $gray;
+
+                                                }
+                                    
+                                       
+                                        }
+                                        div:nth-child(2){
+                                            width: 30%;
+                                            display: flex;
+                                            justify-content: flex-end;
+        
+                                                p{
+                                                    font-size: 0.8vw;
+                                                    color: $gray;
+                                                    margin: 0;
+    
+                                                }
+                                    
+                                       
+                                        }
+                  
+                                    }
+
+              
+                                }
+                                }
+                            }
+                        }
+                        
+
+                    }
+                    .right{
+                        width: 66%;
+                        
+                        z-index: 9999;
+                        .container{
+                            padding: 5%;
+                            background-color:white;
+                            border-radius: 10px;
+                            width: 100%;
+                            .video{
+                                display: flex;
+                                justify-content: center;
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                            p{
+                                margin-top: 3%;
+                                color: $shark;
+                                font-size: 2vw;
+                                font-weight: 500 !important;
+                            }
+                            .text{
+                                
+                                h1{
+                                    color: $purpel;
+                                    font-size: 1.3vw;
+                                    font-weight: bold;
+                                    opacity: 0.9;
+                                }
+                                p{
+                                    color: $dark-grey;
+                                    font-size: 1vw;
+                                    margin-bottom: 4%;
+                                    opacity: 0.9;
+                                }
+                            }
+                        }
+                        .box{
+                            padding: 5%;
+                            margin-top: 2%;
+                            background-color: white;
+                            border-radius: 10px;
+                            h1{
+                                color: $purpel;
+                                font-size: 1.3vw;
+                                font-weight: bold;
+                                opacity: 0.9;
+                                margin-bottom: 3%;
+                            }
+                            p{
+                                color: $dark-grey;
+                                font-size: 1vw;
+                                margin-bottom: 4%;
+                                opacity: 0.9;
+                            }
+   
+                        }
+                        #tarifs{
+                            display: block;
+                            div{
+                                width: 100%;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                margin: 4% 0 4% 0;
+                                h1{
+                                    margin-bottom: 0 !important;
+                                    color: black !important;
+                                    font-size: 1.1vw;
+                                    font-weight: bold;
+                                }
+                                h2{
+                                    margin-bottom: 0 !important;
+                                    color: $purpel;
+                                    font-size: 1vw;
+                                    font-weight: bold;
+                                    float: right;
+                                    background-color: rgba(232, 218, 250, 0.5);
+                                    padding: 1% 2% 1% 2%;
+                                    border-radius: 25px;   
+                                }
+                            }
+                        }
+                        .slideshow{
+                            margin-top: 7%;
+                            display: flex;
+                            flex-direction: column;
+                            width: 100%;
+                            .content{
+                                display: flex;
+                                margin-bottom: 2%;
+                           
+                                h1{
+                                    color: $purpel;
+                                    font-size: 1.5vw;
+                                    font-weight: bold;
+                                }
+                                div{
+                                    width: 50%;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-between;
+                                    h2{
+                                        display: flex;
+                                        justify-content: flex-end;
+                                        width: 45%;
+                                        a{
+                                            text-decoration: none;
+                                            color: $purpel;
+                                            font-size: 1vw;
+                                            background-color:$lightgrey;
+                                            padding: 10px;
+                                            border-radius:50px;
+                                            &:hover{
+                                                transition: 0.5s ease-in-out;
+                                                background-color:$lightgrey2;
+                    
+                                            }
+                    
+                    
+                                        }
+                                    }
+                                    h3{
+                                        display: flex;
+                                        justify-content: flex-start;
+                                        width: 45%;
+                    
+                                        a{
+                                            text-decoration: none;
+                                            color: $gray;
+                                            font-size: 1vw;
+                                            padding: 10px;
+                                            border-radius:50px;
+                                            &:hover{
+                                                transition: 0.5s ease-in-out;
+                                                background-color:$lightgrey;
+                    
+                                            }
+                    
+                    
+                                        }
+                                    }
+                                }       
+                            }
+                            .slider{
+                                position: relative;
+                                z-index: 9999;
+                                overflow: hidden;
+                    
+                    
+                            .swiper-container {
+                                width: 100%;
+                                height: 100%;
+                      
+                      
+                      
+                                .swiper-wrapper{
+                                    height: 100%;
+                                    width: 100%;
+                                  .swiper-slide {
+                                      text-align: center;
+                                      font-size: 18px;
+                                      background: #fff;
+                              
+                                      /* Center slide text vertically */
+                                      display: -webkit-box;
+                                      display: -ms-flexbox;
+                                      display: -webkit-flex;
+                                      display: flex;
+                                      -webkit-box-pack: center;
+                                      -ms-flex-pack: center;
+                                      -webkit-justify-content: center;
+                                      justify-content: center;
+                                      -webkit-box-align: center;
+                                      -ms-flex-align: center;
+                                      -webkit-align-items: center;
+                                      align-items: center;
+                                      .image1{
+                                          position: relative;
+                                          img{
+                                             position: relative;
+                                            width: 100%;
+                                            height: 100% !important;
+                                            z-index:99;
+                                        }
+                                        .filter{
+                                            position: absolute;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100%;
+                                            height: 100%;
+                                            // background-color: rgba($purpel, 0.2);
+                                            background-image: linear-gradient(transparent, $purpel);
+                                            opacity: 0.3;
+                                            z-index: 999;
+                                            // border-radius: 10px;
+                                        }
+                                        .container{
+                                            display: flex;
+                                            flex-direction: column;
+                                            position: absolute;
+                                            align-items: center;
+                                            justify-content: flex-end;
+                                            top: 0;
+                                            left: 0;
+                                            width: 100% !important;
+                                            height: 100% !important;
+                                            color: white;
+                                            padding: 0 !important;
+                                            margin: 0 !important;
+                                            .content{
+                                                display: flex;
+                                                flex-direction: column;
+                                     
+                                                width: 80%;
+                                                height: 35%;
+                                                z-index: 9999;
+                      
+                                              h1{
+                                                  width: 100%;
+                                                  color: white;
+                                                  font-size: 1.4vw;
+                                                  font-weight: bold;
+                                                  font-style: normal;
+                                                  font-display: swap;
+                                              }
+                                              h2{
+                                                  width: 100%;
+                                                  font-size: 0.8vw;
+                                                  font-weight: 500;
+                                              }
+                                              h3{
+                                                  width: 100%;
+                                                  font-size: 0.7vw;
+                                                  margin-top: 0.4vw;
+                                              }
+                                              .info{
+                                                  width: 100%;
+                                                  display: flex;
+                                                  align-items: center;
+                                                  justify-content: center;
+                                                  a{
+                                                      font-size: 0.6vw;
+                                                      background-color:rgba($lightgrey2, 0.2);
+                                                      margin: 0 0.5vw 0 0.5vw;
+                                                      border-radius:50px;
+                                                      padding: 2%;
+                                    
+                                                  }
+                                 
+                                              }
+                                            }
+                          
+                      
+                                        }
+                                      }
+                    
+                                      
+                    
+                                    }
+                                }
+                        
+                          
+                              }
+                              .icon{
+                                background-color: white;
+                                border-radius: 50%;
+                                height: 4vw;
+                                width: 4vw;
+                                z-index: 999;
+
+                       
+                              }
+                              .swiper-button-next{
+                                color: $purpel;
+                                margin-right: -5%;
+                                // background-image: url("../images/Results/Vector.svg") !important;
+                                background-repeat: no-repeat;
+                                background-size: 100% auto;
+                                background-position: center;
+                                &::after{
+                                    display: none;
+                    
+                                }
+                    
+                         
+                    
+                              }
+                              .swiper-button-prev{
+                                  color: $purpel;
+                                  margin-left: -5%;
+                                //   background-image: url("../images/Results/Vector.svg") !important;
+                                  background-repeat: no-repeat;
+                                  background-size: 100% auto;
+                                  background-position: center;
+                                  transform: rotate(180deg);
+                    
+                                  &::after{
+                                      display: none;
+                    
+                                  }
+                    
+                              }
+                            }
+                    
+                      
+                        
+                    
+                        }
+                    }
+                }
+
+            }
+            
+    footer {
+        margin-top: 10%;
+        height: 100%;
+        background-color: $purpel;
+         z-index: 9999;
+        border-radius: 50% 50% 0 0 / 15% 15% 0 0 ;
+    
+        .lists {
+            display: flex;
+            padding: 5% 10% 5% 10%;
+            .list {
+                width: 100%;
+         
+      
+                ul {
+                    list-style: none;
+                    li {
+                        font-size: 1vw;
+                        font-weight: 500;
+                        line-height: 250%;
+                        
+                        a {
+                            text-decoration: none;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+        .bar {
+            display: flex;
+            width: 100%;
+            align-items: center;
+            padding: 1% 2% 1% 2%;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            .left {
+                width: 5%;
+                float: left;
+                img{
+                    width: 50%;
+                }
+            }
+            .right {
+                width: 95%;
+                float: right;
+                p {
+                    float: right;
+                    color: white;
+                    font-size: 0.8vw;
+                    margin-bottom: 0;
+                }
+            }
+        }
+    } 
+    
+
+
+}
+            
+ 
+          
+    
+

@@ -1,0 +1,811 @@
+@font-face {
+    font-family: "Söhne";
+    src: url("/font/Sohne-Buch.eot");
+    src: url("/font/Sohne-Buch.eot?#iefix") format("embedded-opentype"), url("/font/Sohne-Buch.woff2") format("woff2"), url("/font/Sohne-Buch.woff") format("woff"), url("/font/Sohne-Buch.ttf") format("truetype"), url("/font/Sohne-Buch.svg#Sohne-Buch") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("/font/SohneBreit-Kraftig.eot");
+    src: url("/font/SohneBreit-Kraftig.eot?#iefix") format("embedded-opentype"), url("/font/SohneBreit-Kraftig.woff2") format("woff2"), url("/font/SohneBreit-Kraftig.woff") format("woff"), url("/font/SohneBreit-Kraftig.ttf") format("truetype"), url("/font/SohneBreit-Kraftig.svg#SohneBreit-Kraftig") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("/font/SohneBreit-Dreiviertelfett.eot");
+    src: url("/font/SohneBreit-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("/font/SohneBreit-Dreiviertelfett.woff2") format("woff2"), url("/font/SohneBreit-Dreiviertelfett.woff") format("woff"), url("/font/SohneBreit-Dreiviertelfett.ttf") format("truetype"), url("/font/SohneBreit-Dreiviertelfett.svg#SohneBreit-Dreiviertelfett") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("/font/Sohne-Dreiviertelfett.eot");
+    src: url("/font/Sohne-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("/font/Sohne-Dreiviertelfett.woff2") format("woff2"), url("/font/Sohne-Dreiviertelfett.woff") format("woff"), url("/font/Sohne-Dreiviertelfett.ttf") format("truetype"), url("/font/Sohne-Dreiviertelfett.svg#Sohne-Dreiviertelfett") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("/font/SohneBreit-Halbfett.eot");
+    src: url("/font/SohneBreit-Halbfett.eot?#iefix") format("embedded-opentype"), url("/font/SohneBreit-Halbfett.woff2") format("woff2"), url("/font/SohneBreit-Halbfett.woff") format("woff"), url("/font/SohneBreit-Halbfett.ttf") format("truetype"), url("/font/SohneBreit-Halbfett.svg#SohneBreit-Halbfett") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* colors */
+
+$black: #000000;
+$purpel: #6400e4;
+$white: #ffffff;
+$yallow: #ffd500;
+$gray: #ababab;
+$dark-grey: #585858;
+$grey2: #e8dafa;
+$lightgrey: #f7f2fd;
+$lightgrey2:#E8DAFA;
+$lightpurpel: #c20094;
+$fushia:#7444BE;
+$menugrey:#E8DAFA;
+$back-color:#F9F9F9;
+$shark:#1A1C21;
+$facebook: #3B5998;
+$input-grey:#F7F7F7;
+$greeny:#6ECCA9;
+$lightgreen:#F1FAF6;
+$redy:#FF6B53;
+
+* {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Söhne";
+
+
+}
+body{
+
+        .sidebar{
+            width: 15%;
+            height: 100%;
+            display: flex;
+            position: fixed;
+            top: 0;
+            left: 0;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            z-index: 999;
+  
+            .logo{
+                display: flex;
+                align-items: center;
+                width: 100%;
+                img{
+                    margin: 10%;
+                }
+  
+            }
+            .menu{
+                width: 100%;
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    list-style: none;
+                    padding: 0;
+                    margin-top: 10%;
+                    width: 100%;
+                    li{
+                        width: 100%;
+                        padding-left: 10%;
+                        border-left: 0.3vw solid white;
+
+        
+                        a{
+                            text-decoration: none;
+                            
+                            width: 100%;
+                            h2{
+                                font-size: 1vw;
+                                font-weight: bold;
+                                color: $gray;
+                                line-height: 2vw;
+                                &:hover{
+                                    color: $purpel;
+                                    transition: 0.3s ease-in-out;
+
+                                }
+                                
+                            }
+                        }
+                        &:hover{
+                            border-left: 0.3vw solid $purpel;
+                            transition: 0.3s ease-in-out;
+
+                        }
+                    }
+                    .active{
+                    border-left: 0.3vw solid $purpel;
+                    h2{
+                        color: $purpel;
+                    }
+                    }  
+
+                }
+            }
+
+        }
+        .right{
+            display: flex;
+            flex-direction: column;
+            width: 85%;
+            float: right;
+
+
+            .top{
+                width: 85%;
+                padding: 0.5%;
+                display: flex;
+                position: fixed;
+                border-left: 2px solid $lightgrey;
+                top: 0;
+                right: 0;
+                justify-content: space-between;
+                background-color: white;
+                z-index: 999;
+                .form{
+                    width: 75%;
+                    .input-group{
+                        span{
+                            border: none;
+                            background-color: $lightgrey;
+                            img{
+    
+                            }
+                        }
+                    }
+                    input{
+                        font-size: 0.8vw;
+                        font-weight: 500;
+                        background-color: $lightgrey;
+                        border: none;
+                        &::placeholder{
+                            color: $gray;
+                        }
+                    }
+                }
+    
+                .notifications{
+                    display: flex;
+                    justify-content: space-evenly;
+                    align-items: center;
+                    width: 20%;
+                    ul{
+                        display: flex;
+                        width: 35%;
+                        justify-content: space-around;
+                        list-style: none;
+                        margin: 0;
+                        padding: 0;
+                        align-items: center;
+                        li{
+                            a{
+                                img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                    button{
+                        height: 90%;
+                        width: 45%;
+                        color: $purpel;
+                        font-size: 0.7vw;
+                        font-weight: bold;
+                        border: none;
+                        border-radius: 5px;
+                        background-color: $yallow;
+                
+                    }
+                }
+                .profile{
+                    width: 5%;
+                    display: flex;
+                    align-items: center;
+                    a{
+                        margin-right: 10%;
+    
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .content{
+                background-color: $input-grey;
+                width: 100%; 
+                display: flex;
+                flex-direction: column;
+                .current{
+                    width: 100%;
+                    display: flex;
+                    padding-top: 6%;
+                    padding-left: 2%;
+                    img{
+                        margin-right: 0.6%;
+                    }
+                    h2{
+                        margin-left: 0;
+                        color: $shark;
+                        font-size: 1.7vw;
+                        font-weight: bold;
+                    }
+
+
+                }
+
+                .controles{
+                    width: 80%;
+                    height: 2vw;
+                    display: flex;
+                    margin-left: 2%;
+                    position: relative;
+                    margin-bottom: 1%;
+                    margin-top: 2%;
+                    .swiper-pagination{
+                        display: flex;
+                        height: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        span{
+                            width: 8vw;
+                            height: 100%;
+                            border-radius: 0;
+                            background-color: $lightgrey !important;
+                            margin-right: 2%;
+                            font-size: 1vw;
+                            
+                        }
+                        .swiper-pagination-bullet-active{
+                            color: $purpel;
+                            border-bottom: 0.18vw solid $purpel;
+                   
+                        }
+                    }                    
+                }
+
+                .container1{
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    justify-content:space-evenly;
+                    margin-top: 1%;
+                    .left{
+                        width: 70%;
+                        overflow: hidden;
+
+                        .swiper-container{
+
+                            .swiper-wrapper{
+                                .swiper-slide{
+                                    display: flex;
+                                    flex-direction: column;
+
+                                    // padding: 2% 0 2% 0;
+                                    .info{
+                                        width: 100%;
+                                        display: flex;
+                                        flex-direction: column;
+                                        border: none;
+                                        border-radius: 5px;
+                                        margin-bottom: 3%;
+                                        background-color: white;
+                                        .top_content{
+                                            width: 100%;
+                                            display: flex;
+                                            align-items: center;
+                                            padding: 3% 0 3% 0;
+                                            .image{
+                                                width: 15%;
+                                                display: flex;
+                                                justify-content: center;
+                                                align-items: center;
+                                                img{
+                                                    width: 60%;
+                                                }
+                                            }
+                                            .content{
+                                                background-color: white;
+
+                                                h2{
+                                                    font-size: 1.2vw;
+                                                    font-weight: bold;
+                                                    color: $shark;
+                                                    margin: 0;
+                                                    margin-bottom: 1%;
+                                                }
+                                                p{
+                                                    font-size: 0.8vw;
+                                                    color: $dark-grey;
+                                                    font-weight: 500;
+                                                    margin: 0;
+                                                }
+                                            }
+                                        }
+                                        .inputs{
+                                            display: flex;
+                                            flex-direction: column;
+                                            .input{
+                                                display: flex;
+                                                justify-content: space-evenly;
+                                                width: 100%;
+                                                margin-bottom: 3%;
+                                                div{
+                                                    width: 46%;
+                                  
+                                                    h2{
+                                                        font-size: 0.8vw;
+                                                        font-weight: 500;
+                                                        color: $dark-grey;
+                                                    }
+                                                    input{
+                                                        width: 100%;
+                                                        border: none;
+                                                        background-color: $lightgrey;
+                                                        height: 3vw;
+                                                        border-radius: 5px;
+                                                        &::placeholder{
+                                                            font-size: 0.8vw;
+                                                            font-weight: 500;
+                                                            color: $shark;
+                                                            padding-left: 1.2vw;
+                                                            
+                                                        }
+
+                                                    }
+                                                    .grey{
+                                                        &::placeholder{
+                                                            color: $gray;
+                                                        }
+                                                    }
+                                                    .password{
+                                                        &::placeholder{
+                                                            font-size: 1vw;
+                                                        }
+                                                    }
+                                                }
+
+                                            }
+                                            .adress{
+                                                div{
+                                                    width: 95%;
+                                                }
+                                            }
+                                        }
+                                        .switchers{
+                                            display: flex;
+                                            flex-direction: column;
+                                            align-items: center;
+                                            .switcher{
+                                                display: flex;
+                                                justify-content: space-between;
+                                                align-items: center;
+                                                width: 92%;
+                                                border-bottom: 2px solid $lightgrey;
+                                                padding: 1% 0 1% 0;
+                                                .left{
+                                                    h2{
+                                                        font-size: 1vw;
+                                                        color: $shark;
+                                                        font-weight: bold;
+                                                    }
+                                                    p{
+                                                        font-size: 0.8vw;
+                                                        color: $gray;
+                                                        font-weight: 500;
+                                                    }
+                                                }
+                                                .form-switch{
+                                                    input{
+                                                        height: 1.5vw;
+                                                        width: 3vw;
+                                                        color: $greeny;
+                                                        transition: 0.3s;
+                                                        box-shadow: none;
+                                                        border: none;
+                                                        background-color: $lightgrey2;
+                                                        &:checked{
+                                                            background-color: $greeny;
+                                                            
+                                                        }
+                                                        // &:focus{
+                                                        //     background-color: $greeny;
+                                                        // }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        .delete{
+                                            padding: 4%;
+                                            display: flex;
+                                            justify-content: space-between;
+                                            align-items: center;
+                                            .left{
+                                                display: flex;
+                                                width: 70%;
+                                                .image{
+                                                    width: 12%;
+                                                    display: flex;
+                                                    justify-content: center;
+                                                    align-items: center;
+                                                    img{
+                                                        width: 100%;
+                                                    }
+                                                }
+                                                div:nth-child(2){
+                                                    display: flex;
+                                                    flex-direction: column;
+                                                    width: 88%;
+                                                    margin-left: 2%;
+                                                    h2{
+                                                        font-size: 1vw;
+                                                        color: $shark;
+                                                        font-weight: bold;
+                                                        margin: 0;
+                                                        margin-bottom: 1.5%;
+                                                    }
+                                                    p{
+                                                        font-size: 0.8vw;
+                                                        font-weight: 500;
+                                                        color: $redy;
+                                                        margin: 0;
+                                                    }
+                                                }
+                                            }
+                                            .button{
+                                                button{
+                                                    background-color: $redy;
+                                                    color: white;
+                                                    height: 3vw;
+                                                    width: 12vw;
+                                                    border: none;
+                                                    border-radius: 5px;
+                                                    font-size: 0.9vw;
+                                                    font-weight: bold;
+                                                }
+                                            }
+
+                                        }
+
+                                    }
+                                    #buttons{
+                                        width: 100%;
+                                        display: flex ;
+                                        flex-direction: row;
+                                        margin-bottom: 10%;
+                                        button{
+                                            width: 15vw;
+                                            height: 3vw;
+                                            margin-right: 2%;
+                                            border: none;
+                                            border-radius: 5px;
+                                            color: $purpel;
+                                            font-size: 0.9vw;
+                                            font-weight: normal;
+                                            &:nth-child(1){
+                                                background-color: $yallow;
+                                            }
+                                            &:nth-child(2){
+                                                background-color: $lightgrey;
+                                                width: 10vw;
+                                            }
+                                        }
+                                    }
+                                
+
+                                }
+                                .slide{
+                                    .card{
+                                        display: flex;
+                                        flex-direction: column;
+                                        justify-content: center;
+                                        align-items: center;
+                                        height: 25vw;
+                                        text-align: center;
+                                        img{
+                                            width: 15%;
+                                        }
+                                        h2{
+                                            font-size: 1vw;
+                                            font-weight: bold;
+                                            color: $gray;
+                                            margin-top: 2%;
+
+                                        }
+                                        p{
+                                            font-size: 0.8vw;
+                                            color: $gray;
+                                            font-weight: 500;
+                                            width: 35%;
+                                        }
+                                        button{
+                                            border: none;
+                                            border-radius: 5px;
+                                            background-color:$yallow;
+                                            color: $purpel;
+                                            font-size: 0.9vw;
+                                            font-weight: bold;
+                                            width: 16vw;
+                                            height: 2.5vw;
+                                        }
+                                    }
+                                
+  
+                                }
+                                .gifts{
+
+                                    .card{
+                                        display: flex;
+                                        flex-direction: column;
+                                        padding: 3%;
+                                        h2{
+                                            font-size: 1.5vw;
+                                            font-weight: bold;
+                                            color: $shark;
+                                        }
+                                        p{
+                                            font-size: 0.8vw;
+                                            font-weight: normal;
+                                            color: $dark-grey;
+                                        }
+                                        .boxs{
+                                            display: flex;
+                                            justify-content: space-between;
+                                            margin-top: 1%;
+                                            .box{
+                                                display: flex;
+                                                flex-direction: column;
+                                                justify-content: center;
+                                                align-items: center;
+                                                width: 32%;
+                                                background-color: $lightgrey;
+                                                height: 20vw;
+                                                border-radius: 10px;
+                                                border: 1px solid $lightgrey2;
+                                                position: relative;
+                                                .plus{
+                                                    position: absolute;
+                                                    top: 3%;
+                                                    left: 5%;
+                                                    font-size: 0.6vw;
+                                                    font-weight: bold;
+                                                    color: $purpel;
+                                                    background-color: white;
+                                                    padding: 1% 2% 1% 2%;
+                                                    border-radius: 25px;
+                                                    border: 1px solid $lightgrey2;
+
+                                                }
+                                                img{
+                                                    width: 30%;
+                                                }
+                                                .price{
+                                                    text-align: center;
+                                                    position: relative;
+                                                    padding:0 7% 0 7%;
+                                                    h3{
+                                                        font-size: 3vw;
+                                                        font-weight: bold;
+                                                        color: $purpel;
+                                                        margin-top: 10%;
+                                                    }
+                                                    .dh{
+                                                        position: absolute;
+                                                        top: 25%;
+                                                        right: 0;
+                                                        font-size: 0.7vw;
+                                                        color: $purpel;
+                                                        font-weight: bold;
+                                                    }
+                                                }
+                                                p{
+                                                    font-size: 0.6vw;
+                                                    color: $purpel;
+                                                    font-weight: 500;
+                                                }
+                                                button{
+                                                    width: 80%;
+                                                    border: none;
+                                                    border-radius: 5px;
+                                                    height: 2.5vw;
+                                                    background-color: $yallow;
+                                                    color: $purpel;
+                                                    font-size: 1vw;
+                                                    font-weight: bold;
+                                                }
+
+                                            }
+
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                    } 
+                    .right{
+                        width: 25%;
+                        margin-top: -3.5vw;
+                        overflow: hidden;
+
+                        .swiper-slide{
+
+                            #mise_a_jour{
+
+                                width: 100%;
+                                display: flex;
+                                justify-content: flex-end;
+                                z-index: 999;
+                                margin-bottom: 1vw;
+                                height: 2.5vw;
+                                button{
+                                    color: $purpel !important;
+                                    height: 2.5vw;
+                                    border: none;
+                                    border-radius: 5px;
+                                    font-size: 0.8vw;
+                                    font-weight: bold;
+                                    &:nth-child(1){
+                                        background-color: $yallow;
+                                        width: 10vw;
+                                    }
+                                    &:nth-child(2){
+                                        background-color: $lightgrey;
+                                        width: 5vw;
+                                        margin-left: 3%;
+                                    }
+                                }
+                
+    
+                            }
+                        }
+
+                        .box{
+                            background-color: white;
+                            margin-bottom: 5%;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            justify-content: space-around;
+                            text-align: center;
+                            padding: 15% 0 15% 0;
+                            .image{
+                                width: 100%;
+
+                                img{
+                                    width: 40%;
+                                }
+                            }
+                            h2{
+                                font-size: 1.1vw;
+                                margin-bottom: 3%;
+                                color: $purpel;
+                                margin-top: 3%;
+                                font-weight: bold;
+                            }
+                            p{
+                                font-size: 0.7vw;
+                                color: $dark-grey;
+                                width: 75%;
+                                margin-bottom: 3%;
+                            }
+                            button{
+                                color: $purpel;
+                                height: 2.5vw;
+                                width: 50%;
+                                background-color: $yallow;
+                                font-size: 0.7vw;
+                                border: none;
+                                border-radius: 5px;
+                            }
+                            #gift2{
+                                width: 80%;
+                            }
+                            input{
+                                background-color: $lightgrey;
+                                border: none;
+                                border-radius: 5px;
+                                height: 2.5vw;
+                                margin: 5% 0 5% 0;
+                                width: 80%;
+                                &::placeholder{
+                                    font-size: 0.9vw;
+                                    font-weight: 500;
+                                    color: $shark;
+                                    padding-left: 8%;
+                                }
+                            }
+                        }
+                        .course{
+                            background-color: white;
+                            display: flex;
+                            flex-direction: column;
+                            align-items: center;
+                            .text{
+                                width: 100%;
+                                padding: 5%;
+                                display: flex;
+                                align-items: center;
+                                h2{
+                                    font-size: 1.1vw;
+                                    font-weight: normal;
+                                    margin: 0;
+                                }
+                           
+                            }
+                            .container-course{
+                                display: flex;
+                                align-items: center;
+                                background-color: $lightgrey;
+                                width: 85%;
+                                margin-bottom: 7%;
+                                padding: 7%;
+                                border-left: 0.5vw solid $greeny;
+                                border-radius: 5px;
+                                .image{
+                                    width: 70%;
+                                    img{
+                                        width: 30%;
+                                    }
+                                    
+                                    p{
+                                        font-size: 0.6vw;
+                                        margin: 0;
+                                        color: $gray;
+                                    }
+                                    h3{
+                                        font-size: 1vw;
+                                        font-weight: bold;
+                                        margin-top: 5%;
+                                    }
+                                }
+                                .day{
+                                    width: 30%;
+                                    .box{
+                                        background-color: $greeny;
+                                        border-radius: 5px;
+                                        h2,p{
+                                            color: white;
+                                        }
+                                    }
+                                }
+            
+                                
+                            }
+                        }
+                    }
+                }
+            }
+
+
+
+        }
+    
+    
+}

@@ -1,0 +1,288 @@
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/Sohne-Buch.eot");
+    src: url("../font/Sohne-Buch.eot?#iefix") format("embedded-opentype"), url("../font/Sohne-Buch.woff2") format("woff2"), url("../font/Sohne-Buch.woff") format("woff"), url("../font/Sohne-Buch.ttf") format("truetype"), url("../font/Sohne-Buch.svg#Sohne-Buch") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/SohneBreit-Kraftig.eot");
+    src: url("../font/SohneBreit-Kraftig.eot?#iefix") format("embedded-opentype"), url("../font/SohneBreit-Kraftig.woff2") format("woff2"), url("../font/SohneBreit-Kraftig.woff") format("woff"), url("../font/SohneBreit-Kraftig.ttf") format("truetype"), url("../font/SohneBreit-Kraftig.svg#SohneBreit-Kraftig") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/SohneBreit-Dreiviertelfett.eot");
+    src: url("../font/SohneBreit-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("../font/SohneBreit-Dreiviertelfett.woff2") format("woff2"), url("../font/SohneBreit-Dreiviertelfett.woff") format("woff"), url("../font/SohneBreit-Dreiviertelfett.ttf") format("truetype"), url("../font/SohneBreit-Dreiviertelfett.svg#SohneBreit-Dreiviertelfett") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/Sohne-Dreiviertelfett.eot");
+    src: url("../font/Sohne-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("../font/Sohne-Dreiviertelfett.woff2") format("woff2"), url("../font/Sohne-Dreiviertelfett.woff") format("woff"), url("../font/Sohne-Dreiviertelfett.ttf") format("truetype"), url("../font/Sohne-Dreiviertelfett.svg#Sohne-Dreiviertelfett") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/SohneBreit-Halbfett.eot");
+    src: url("../font/SohneBreit-Halbfett.eot?#iefix") format("embedded-opentype"), url("../font/SohneBreit-Halbfett.woff2") format("woff2"), url("../font/SohneBreit-Halbfett.woff") format("woff"), url("../font/SohneBreit-Halbfett.ttf") format("truetype"), url("../font/SohneBreit-Halbfett.svg#SohneBreit-Halbfett") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* colors */
+
+$black: #000000;
+$purpel: #6400e4;
+$white: #ffffff;
+$yallow: #ffd500;
+$gray: #ababab;
+$dark-grey: #585858;
+$grey2: #e8dafa;
+$lightgrey: #f7f2fd;
+$lightgrey2:#E8DAFA;
+$lightpurpel: #c20094;
+$fushia:#7444BE;
+$menugrey:#E8DAFA;
+$back-color:#F9F9F9;
+$shark:#1A1C21;
+$facebook: #3B5998;
+$input-grey:#F7F7F7;
+
+* {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Söhne";
+
+
+}
+
+body{
+    .container1{
+        display: flex;
+        width: 100% !important;
+        .left{
+            width: 100%;
+            position: relative;
+            img{
+                width: 100%;
+            }
+            .brand{
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                   width: 50%;
+                }
+       
+            }
+        }
+
+        .right{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            .top{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                padding-top: 3%;
+                .left{
+                    width: 20%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+        
+                    h2{
+                        font-size: 0.9vw;
+                        font-weight: bold;
+                        color: $purpel;
+                        margin-top: 5%;
+
+                    }
+                    i{
+                        color: $purpel;
+                    }
+
+                }
+                .right{
+                    width: 20%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    h2{
+                        font-size: 0.9vw;
+                        font-weight: bold;
+                        color: $gray;
+                        margin-top: 5%;
+
+                    }
+                    i{
+                        color: $gray;
+
+                    }
+                }
+            }
+            form{
+                width: 55%;
+                height: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                h1{
+                    font-weight: bold;
+                    font-size: 2.5vw;
+                    margin-bottom: 5%;
+                }
+                
+                .social_media{
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    a{
+                        display: flex;
+                        width: 100% ;
+                        text-decoration: none;
+                        align-items: center;
+                        padding: 2% 5% 2% 5%;
+                        border-radius: 50px;
+                        margin-bottom: 2%;
+
+                        img{
+                            width: 10%;
+                            padding: 2%
+                        }
+                        h2{
+                            text-align: center;
+                            width: 80%;
+                            font-size: 1.1vw;
+                            font-weight: bold;
+                            margin: 0;
+                        }
+                        &:nth-child(1){
+                            background-color: $facebook;
+                            color: white;
+                        }
+                        &:nth-child(2){
+                            color: black;
+                            border: 1px solid $lightgrey2;
+                        }
+                    }
+                }
+                #line{
+                                                
+                    text-align:center;
+                    position:relative;
+                    z-index:2;
+                    color: $gray;
+                    font-size: 0.9vw;
+                    margin: 3% 0 1% 0;
+                    
+                    .line-center{
+                        margin:0;padding:0 10px;
+                        background:#fff;
+                        display:inline-block;
+                        &::after{
+                            content:"";
+                            position:absolute;
+                            top:50%;
+                            left:0;
+                            right:0;
+                            border-top:solid 1px $lightgrey2;
+                            z-index:-1;
+                        }
+                    }
+                }
+                .sign_up{
+                    input{
+                        width: 100%;
+                        margin-top: 3%;
+                        height: 3vw;
+                        border: none;
+                        border-radius: 5px;
+                        background-color: $input-grey;
+                        padding-left: 5%;
+                        font-size: 0.8vw;
+                        &::placeholder{
+                            color: $gray;
+                        }
+                    }
+                    #submit{
+                        background-color: $yallow;
+                        font-weight: bold;
+                        font-size: 1vw;
+                        color: $purpel;
+                        padding: 0;
+                        margin-top: 6%;
+         
+                    }
+  
+                }
+                p{
+                    font-size: 1vw;
+                    color: $gray;
+                    font-weight: bold;
+                    margin-top: 5%;
+                    margin-bottom: 0;
+                    color: #1A1C21;
+                    span{
+                        a{
+                            font-weight: bold;
+                            font-size: 1vw;
+                            color: $gray;
+                            border-bottom: 0.15vw solid $purpel;
+                            text-decoration: none;
+                            color: $purpel;
+                        }
+
+                        
+                    }
+                }
+
+                
+
+                }
+            .bottom{
+                margin: 0 5% 0 11.75% ;
+                p{
+                   font-size: 0.7vw;
+                   font-weight: 500;
+                   span{
+                       a{
+                        font-weight: bold;
+                        color: #1A1C21;
+                        font-size: 0.9vw;
+                       }
+      
+                   }
+                }
+            }
+        }
+    }
+
+}

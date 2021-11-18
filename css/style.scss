@@ -1,0 +1,894 @@
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/Sohne-Buch.eot");
+    src: url("../font/Sohne-Buch.eot?#iefix") format("embedded-opentype"), url("../font/Sohne-Buch.woff2") format("woff2"), url("../font/Sohne-Buch.woff") format("woff"), url("../font/Sohne-Buch.ttf") format("truetype"), url("../font/Sohne-Buch.svg#Sohne-Buch") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/SohneBreit-Kraftig.eot");
+    src: url("../font/SohneBreit-Kraftig.eot?#iefix") format("embedded-opentype"), url("../font/SohneBreit-Kraftig.woff2") format("woff2"), url("../font/SohneBreit-Kraftig.woff") format("woff"), url("../font/SohneBreit-Kraftig.ttf") format("truetype"), url("../font/SohneBreit-Kraftig.svg#SohneBreit-Kraftig") format("svg");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/SohneBreit-Dreiviertelfett.eot");
+    src: url("../font/SohneBreit-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("../font/SohneBreit-Dreiviertelfett.woff2") format("woff2"), url("../font/SohneBreit-Dreiviertelfett.woff") format("woff"), url("../font/SohneBreit-Dreiviertelfett.ttf") format("truetype"), url("../font/SohneBreit-Dreiviertelfett.svg#SohneBreit-Dreiviertelfett") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/Sohne-Dreiviertelfett.eot");
+    src: url("../font/Sohne-Dreiviertelfett.eot?#iefix") format("embedded-opentype"), url("../font/Sohne-Dreiviertelfett.woff2") format("woff2"), url("../font/Sohne-Dreiviertelfett.woff") format("woff"), url("../font/Sohne-Dreiviertelfett.ttf") format("truetype"), url("../font/Sohne-Dreiviertelfett.svg#Sohne-Dreiviertelfett") format("svg");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Söhne";
+    src: url("../font/SohneBreit-Halbfett.eot");
+    src: url("../font/SohneBreit-Halbfett.eot?#iefix") format("embedded-opentype"), url("../font/SohneBreit-Halbfett.woff2") format("woff2"), url("../font/SohneBreit-Halbfett.woff") format("woff"), url("../font/SohneBreit-Halbfett.ttf") format("truetype"), url("../font/SohneBreit-Halbfett.svg#SohneBreit-Halbfett") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+/* colors */
+
+$black: #000000;
+$purpel: #6400e4;
+$white: #ffffff;
+$yallow: #ffd500;
+$gray: #ababab;
+$dark-grey: #585858;
+$grey2: #e8dafa;
+$lightgrey: #f7f2fd;
+$lightgrey2:#E8DAFA;
+$lightpurpel: #c20094;
+$fushia:#7444BE;
+$menugrey:#E8DAFA;
+
+* {
+    outline: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+ 
+.fillheader{
+    transition: 0.5s ease-in-out;
+    background-color: $fushia;
+}    
+#header {
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    height: 8%;
+    #logo {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+    #menu {
+        float: right;
+        height: 100%;
+        ul {
+            padding: 0;
+            margin: 0;
+            li {
+                list-style: none;
+                display: inline-block;
+                .active{
+                    background-color: rgba($color: $white, $alpha: 0.2); 
+                }
+                a {
+                    font-family: "Söhne";
+                    font-size: 14px;
+                    line-height: 14px;
+                    color: $white;
+                    text-decoration: none;
+                    margin: 0 3px;
+                    font-weight: 600;
+                    border-radius: 15px;
+                    padding: 5px 15px;
+                    &:hover {
+                        transition: 0.3s;
+                        background-color: rgba($color: $white, $alpha: 0.2);
+                    }
+                }
+            }
+        }
+    }
+}
+
+#zone_slider {
+    width: 100%;
+    padding-top: 40%;
+    position: relative;
+    overflow: hidden;
+    .background {
+        width: 110%;
+        height: 100%;
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 0 0 50% 50% / 0 0 15% 15%;
+        overflow: hidden;
+        &::after {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            background-color: rgba($color: $purpel, $alpha: 0.8);
+        }
+    }
+    .content {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 2;
+        transform: translate(-50%, -50%);
+        h1 {
+            font-family: "Söhne";
+            font-size: 5vw;
+            line-height: 1.1;
+            font-weight: 600;
+            text-align: center;
+            color: #ffffff;
+            letter-spacing: 1px;
+            span {
+                color: $yallow;
+                display: inline-block;
+                position: relative;
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 5px;
+                    background-color: $yallow;
+                    position: absolute;
+                    left: 0;
+                    bottom: -5px;
+                }
+            }
+        }
+        .sous-titre {
+            font-family: "Söhne";
+            font-size: 1.2vw;
+            line-height: 26px;
+            text-align: center;
+            color: #ffffff;
+            font-weight: 500;
+            margin: 20px 0;
+        }
+        .form {
+            display: flex;
+            background-color: $white;
+            border-radius: 0.25rem;
+            margin: 5px 0;
+            .input-group-text {
+                background-color: $white;
+                border: none;
+            }
+            .form-control {
+                border: none;
+                border-radius: 0;
+                height: 50px;
+                box-shadow: none !important;
+                padding-bottom: 10px;
+                &::placeholder {
+                    color: $gray;
+                    font-size: 1.2vw;
+                }
+            }
+            .input-group {
+                &:nth-child(1) {
+                    flex-basis: 50%;
+                }
+            }
+            .input-group {
+                &:nth-child(2) {
+                    flex-basis: 40%;
+                    .input-group-text {
+                        border-radius: 0;
+                    }
+                }
+            }
+            .button {
+                border-radius: 0 0.25rem 0.25rem 0;
+                font-size: 1.7vw;
+            }
+        }
+    }
+    #scroll_down {
+        position: absolute;
+        left: 50%;
+        bottom: 25px;
+        transform: translateX(-50%);
+        z-index: 2;
+        img {
+            max-width: 40px;
+        }
+    }
+}
+
+.button {
+    background-color: $yallow;
+    color: $purpel;
+    border: none;
+    box-shadow: 0px 6px 15px rgba($color: $black, $alpha: 0.1);
+    border-radius: 0.25rem;
+    font-family: "Söhne";
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 14px;
+    padding: 15px 20px;
+}
+
+.container1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+
+    .homme {
+        width: 30%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .description {
+        margin-bottom: 50px;
+        width: 40%;
+        display: block;
+        text-align: center;
+        h2 {
+            font-family: "Söhne";
+            font-size: 1vw;
+            color: #ababab;
+        }
+        h3 {
+            font-family: "Söhne";
+            font-size: 3.1vw;
+            color: $purpel;
+        }
+        p {
+            font-family: "Söhne";
+            font-size: 1vw;
+            color: $gray;
+        }
+    }
+    .femme {
+        width: 30%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+
+
+
+// animation
+.animate{
+    transition: 1s ease-in;
+    .image{
+        #vector{
+           animation: vector 0.5s;
+        }
+        #object{
+            animation: object 0.5s;      
+
+        }
+        #person{
+            animation: person 0.5s;
+        }
+        @keyframes vector {
+            from{
+                opacity:0;
+                transform: translateX(30%) rotate(20deg);
+
+
+            }
+            to{
+                opacity: 1;
+                transform: translateX(0%) rotate(0);
+
+
+            }
+            
+        }
+        @keyframes object{
+            from{
+                opacity:0;
+                transform: translateX(30%);
+
+            }
+            to{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            
+        }
+        @keyframes person {
+            from{
+                opacity:0;
+                transform: translateX(30%);
+            }
+            to{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            
+        }
+    }
+    .content{
+        ul{ 
+            animation: intro 0.5s ;         
+            
+        }
+        @keyframes intro {
+            from{
+                opacity:0;
+                transform: translateX(20%);
+            }
+            to{
+                opacity: 1;
+                transform: translateX(0);
+            }
+            
+        }
+    }
+
+}
+.finish{
+
+}
+.green_slide{
+    color: #6ECCA9 !important;
+}
+.purple_slide{
+    color:$fushia !important;
+}
+.orange_slide{
+    color:#FF6B53 !important;
+}
+.light_orange{
+    color: #EDC17B !important;
+}
+.light_purple{
+    color:#C20094 !important;
+}
+.menugrey{
+    color: $lightgrey2 ;
+
+}
+.container2 {
+    display: flex;
+    width: 100%;
+    background-color: $lightgrey;
+    .categories {
+        width: 25%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15% 0 15% 0;
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                list-style: none;
+                font-size: 2.4vw;
+                font-family: "Söhne";
+                line-height: 180%;
+                a{
+                    text-decoration: none;
+                    color: $lightgrey2 ;
+
+                }
+            }
+        }
+    }
+    .slides {
+        width: 75%;
+        display: flex;
+        position: relative;
+        #purple_slide{
+          
+            #vector{
+                width: 70%;
+            }
+            #object{
+                width: 37%;
+                margin-left: 30%;
+            }
+            #person{
+
+            }
+        } 
+        #green_slide{
+            
+            #vector{
+                width: 60%;
+            }
+            #object{
+                width: 40%;
+                margin-bottom: 10%;
+            }
+            #person{
+                
+            }
+        } 
+        #light_purple{
+            #vector{
+                margin-right: 20%;
+            }
+            #object{
+                width: 60%;
+            }
+            #person{
+                
+            }
+        }
+        #light_orange{
+            #vector{
+                width: 60%;
+            }
+            #object{
+                width: 40%;
+                margin-bottom: 5%;
+            }
+            #person{
+                
+            }
+        } 
+        #orange_slide{
+            #vector{
+
+            }
+            #object{
+                width: 50%;
+                margin-left: 30%;
+                margin-bottom: 7%;
+            }
+            #person{
+                
+            }     
+        }
+
+
+    
+
+        .slide {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+           
+
+            .image {
+                display: flex;
+                width: 70%;
+                position: relative;
+               
+         
+                img {
+                    position: absolute;
+                    max-width: 100%;
+                    height: 80%;    
+                    left: 0; 
+                    right: 0; 
+                    margin-left: auto; 
+                    margin-right: auto; 
+                    bottom:0;
+                    
+                  
+                  
+                }
+                #object{
+                    width: 50%;
+                }
+  
+   
+            }
+            .content {
+                width: 30%;
+                display: flex;
+                align-items: center;
+                position: relative;
+               
+                ul {
+                    position: absolute;
+                    left: 0;
+                    padding-left: 20% !important;
+                    li {
+                        list-style: none;
+                        font-family: "Söhne";
+                        font-size: 1vw;
+                        line-height: 280%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.blockleft {
+    display: flex;
+    .image {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 90%;
+        }
+    }
+    .content {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        .inside {
+            display: block;
+            margin: 0 10% 0 0;
+            .button {
+                font-size: 1.1vw;
+            }
+            p {
+                font-family: "Söhne";
+                font-size: 1vw;
+                color: $gray;
+            }
+            h1 {
+                font-family: "Söhne";
+                font-size: 3vw;
+                color: $purpel;
+            }
+        }
+    }
+}
+
+.blockright {
+    display: flex;
+    background-color: $lightgrey;
+    .image {
+        width: 60%;
+        display: flex;
+        justify-content: center;
+        height: 90%;
+        img {
+            width: 100%;
+        }
+    }
+    .content {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .inside {
+            width: 70%;
+            display: block;
+            margin-left: 10%;
+            .button {
+                font-size: 1.1vw;
+            }
+            p {
+                font-family: "Söhne";
+                font-size: 1vw;
+                color: $gray;
+            }
+            h1 {
+                font-family: "Söhne";
+                font-size: 3vw;
+                color: $purpel;
+            }
+        }
+    }
+}
+
+.default_bg{
+    background-color: $purpel;
+    transition: 0.8s;
+}
+.first_bg{
+    background-color: $yallow;
+    transition: 0.8s;
+}
+.second_bg{
+    background-color:$fushia;
+    transition: 0.8s;
+}
+.slider{
+    position: relative;
+
+    .upline{
+        position: absolute;
+        width: 5px;
+        height: 25vh;
+        top: 0;
+        left: 50%;
+        background-image: url("../images/white_line.png");
+        background-repeat: no-repeat;
+        z-index: 1999;
+        opacity: 0;
+    }
+  
+.external {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 70vh;
+    font-family: 'Söhne';
+    width: 100%;
+    overflow-x: hidden;
+
+    .slide {
+        width: 100%;
+        height: 60vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        font-size: 8vw;
+        color: $yallow;
+
+        .title {
+            display: flex;
+            align-items: flex-end;
+            text-align: center;
+            color: $yallow;
+            font-size: 1.2vw;
+            height: 25vh;
+        }
+        .internal {
+            width: 100%;
+            height: 35vh;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+
+            .slick-current .slide {
+               opacity: 1;
+            }
+            .slide {
+                opacity: 0.5;
+            }
+        }
+    }
+    .external_slide {
+        height: 60vh !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        text-align: center;
+        color: $yallow;
+        font-size: 1.2vw;
+        height: 25vh;
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        height: 35vh;
+    }
+    #title1{
+        color: $purpel;
+    }
+    #title2{
+        color: white;
+    }
+    #text1{
+        color: $purpel;
+        font-size: 10vw;
+    }
+    #text2{
+        color: white;
+        font-size: 10vw;
+    }
+    }
+}
+
+    #nav{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 3%;
+        position: relative;
+        .line{
+            width: 2px;
+            height:25vh;
+            position: absolute;
+            z-index: 1199;
+            bottom: 0;
+            opacity: 0;
+        }
+        #next{
+            transform: rotate(-90deg);
+            margin-left: 0.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 90%;
+            }
+        }
+        #prev{
+            transform: rotate(90deg);
+            margin-right: 0.5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+                width: 90%;
+            }
+        }
+    }
+}
+
+    .active1{
+        opacity: 1 !important; 
+        background-image:url("../images/gold_line.png") !important;
+    }
+    .active2{
+        opacity: 1 !important;  
+        background-image: url("../images/purple_line.png") !important;
+    }
+    .active3{
+        opacity: 1 !important; 
+        background-image: url("../images/purple_line.png") !important;
+    }
+    .active4{
+        opacity: 1 !important; 
+        background-image: url("../images/white_line.png") !important;
+    }
+    .active_slide{
+        opacity: 1 !important;   
+    }
+
+
+
+
+.footerblock {
+        display: flex;
+        background-color: $lightpurpel;
+        z-index: 1000;
+        position: relative;
+        max-width: 100%;
+        height: auto;
+        padding:2vh 0 0 0;
+        .homme {
+            width: 100%;
+            img {
+                width: 100%;
+
+            }
+        }
+        .femme {
+            width: 100%;
+            img {
+                width: 100%;
+            }
+        }
+        .content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 8vh;
+    
+            .inside {
+                color: white;
+                width: 100%;
+                text-align: center;
+                h1 {
+                    font-family: "Söhne";
+                    font-size: 3vw;
+                }
+                p {
+                    font-family: "Söhne";
+                    font-size: 1vw;
+                }
+                input {
+                    margin: 5% 0 5% 0;
+                    font-size: 1.1vw;
+                }
+                .notcenter {
+                    text-align: left;
+                }
+                .button {
+                text-align: center;
+                    width: 100%;
+                    margin-bottom: 5vh;
+                    font-size: 1.1vw;
+                }
+            }
+        }
+    
+}
+}
+
+
+footer {
+    height: 100%;
+    background-color: $purpel;
+    position: relative;
+    z-index: 9999;
+    margin-top: -10vh;
+    border-radius: 50% 50% 0 0 / 15% 15% 0 0 ;
+
+    .lists {
+        display: flex;
+        padding: 5% 10% 5% 10%;
+        .list {
+            width: 100%;
+     
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+  
+            ul {
+                list-style: none;
+                li {
+                    font-size: 1vw;
+                    line-height: 250%;
+                    
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+    .bar {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        padding: 1% 2% 1% 2%;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        .left {
+            width: 5%;
+            float: left;
+            img{
+                width: 50%;
+            }
+        }
+        .right {
+            width: 95%;
+            float: right;
+            p {
+                float: right;
+                color: white;
+                font-size: 0.8vw;
+                margin-bottom: 0;
+            }
+        }
+    }
+}

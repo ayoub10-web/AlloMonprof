@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/Student/compte.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" >
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+</head>
+<body>
+        <div class="sidebar">
+            <div class="logo">
+                <img src="/images/Student/logo.svg">
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="/pages/Student/dashboard.html"><h2 >Tableau de bord</h2></a></li>
+                    <li><a href="/pages/Student/mescours.html"><h2>Mes cours</h2></a></li>
+                    <li><a href="/pages/Student/agenda.html"><h2>Mon agenda</h2></a></li>
+                    <li class="active"><a href="/pages/Student/compte.html"><h2>Mon compte</h2></a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <div class="top">
+                <div class="form">
+                    <div class="input-group">
+                        <span class="input-group-text" id="basic-addon1"><img src="/images/Student/search.svg" alt=""></span>
+                        <input type="text" class="form-control" placeholder="Que souhaitez-vous apprendre ?">
+                    </div>
+                </div>
+                <div class="notifications">
+                    <ul>
+                        <li><a href=""><img src="/images/Student/Assistance.svg" alt=""></a></li>
+                        <li><a href=""><img src="/images/Student/messages.svg" alt=""></a></li>
+                        <li><a href=""><img src="/images/Student/notifications.svg" alt=""></a></li>             
+                    </ul>
+                    <button>Créer une annonce</button>
+                </div>
+                <div class="profile">
+                    <a href=""><img src="/images/Student/profile.png" alt=""></a>
+                    <a href=""><img src="/images/Student/arrow.svg" alt=""></a>
+    
+                </div>
+            </div>
+
+            <div class="content">
+                <div class="current">
+                    <img src="/images/Student/mescours/home.svg" alt="">
+                    <img src="/images/Student/mescours/arrow.svg" alt="">
+                    <h2>Mon compte</h2>
+                 </div>
+                 <div class="controles">
+                    <div class="swiper-pagination"></div>
+                 </div>
+
+                <div class="container1">
+                    <div class="left">
+                        <div class="swiper-container">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                              <!-- Slides -->
+                              <div class="swiper-slide">
+                                  <div class="info">
+                                        <div class="top_content">
+                                            <div class="image">
+                                                <img src="/images/Student/compte/User.svg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h2>Informations générales</h2>
+                                                <p>Informations générales à propos de votre compte</p>
+                                            </div>
+                                        </div>
+                                        <div class="inputs">
+                                            <div class="input">
+                                                <div class="left_input">
+                                                    <h2>Prénom</h2>
+                                                    <input type="text" placeholder="Tarik">
+                                                </div>
+                                                <div class="right_input">
+                                                    <h2>Nom</h2>
+                                                    <input type="text" placeholder="Abassi">
+                                                </div>
+                                            </div>
+                                            <div class="input">
+                                                <div class="left_input">
+                                                    <h2>Adresse éléctronique</h2>
+                                                    <input type="text" placeholder="votre@adresse.ici">
+                                                </div>
+                                                <div class="left_input">
+                                                    <h2>Numéro de téléphone</h2>
+                                                    <input type="text" class="grey" placeholder="Numéro de téléphone">
+                                                </div>
+                         
+                                            </div>
+                                            <div class="input">
+                                                <div class="right_input">
+                                                    <h2>Skype ID</h2>
+                                                    <input type="text" class="grey" placeholder="Skype ID">
+                                                </div>
+                                                <div class="right_input">
+                                                    <h2>Google Meets ID</h2>
+                                                    <input type="text" class="grey" placeholder="Meets ID">
+                                                </div>
+                                            </div>
+    
+                                        </div>
+
+                                    </div>
+                                    <div class="info">
+                                        <div class="top_content">
+                                            <div class="image">
+                                                <img src="/images/Student/compte/adress.svg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h2>Adresse postale</h2>
+                                                <p>Vous pouvez indiquer votre adresse postale</p>
+                                            </div>
+                                        </div>
+                                        <div class="inputs">
+                                            <div class="input adress">
+                                                <div class="left_input">
+                                                    <h2>Adresse postale</h2>
+                                                    <input type="text" class="grey" placeholder="Saisissez une adresse valide">
+                                                </div>
+                                            </div>
+    
+                                        </div>
+
+                                    </div>
+
+                                    <div class="info">
+                                        <div class="top_content">
+                                            <div class="image">
+                                                <img src="/images/Student/compte/password.svg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h2>Changer de mot de passe</h2>
+                                                <p>Vous pouvez changer votre mot de passe ici</p>
+                                            </div>
+                                        </div>
+                                        <div class="inputs">
+                                            <div class="input">
+                                                <div class="left_input">
+                                                    <h2>Ancien mot de passe</h2>
+                                                    <input type="password" class="password" placeholder="••••••••••••••">
+                                                </div>
+                                                <div class="right_input">
+                                                    <h2>Nouveau mot de passe</h2>
+                                                    <input type="password" class="password"  placeholder="••••••••••••••">
+                                                </div>
+                                            </div>
+                                            <div class="input" >
+                                                <div class="left_input" >
+                                                    <h2>Ancien mot de passe</h2>
+                                                    <input type="password" class="password"  placeholder="••••••••••••••">
+                                                </div>
+                                                <div></div>
+
+                         
+                                            </div>
+
+    
+                                        </div>
+
+                                    </div>
+
+                                    <div class="info">
+                                        <div class="top_content">
+                                            <div class="image">
+                                                <img src="/images/Student/compte/adress.svg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h2>Adresse postale</h2>
+                                                <p>Vous pouvez indiquer votre adresse postale</p>
+                                            </div>
+                                        </div>
+                                        <div class="inputs">
+                                            <div class="input adress">
+                                                <div class="left_input">
+                                                    <h2>Adresse postale</h2>
+                                                    <input type="text" class="grey" placeholder="Saisissez une adresse valide">
+                                                </div>
+                                            </div>
+    
+                                        </div>
+
+                                    </div>
+
+                                    <div class="info">
+                                        <div class="top_content">
+                                            <div class="image">
+                                                <img src="/images/Student/compte/notificaton.svg" alt="">
+                                            </div>
+                                            <div class="content">
+                                                <h2>Notifications</h2>
+                                                <p>Vous pouvez changer le type de notifications</p>
+                                            </div>
+                                        </div>
+                                        <div class="switchers">
+                                            <div class="switcher">
+
+                                                <div class="left">
+                                                    <h2>Demande de cours</h2>
+                                                    <p>Nouveautés et demandes sur les cours</p>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                </div>
+                                            </div>
+
+                                            <div class="switcher">
+
+                                                <div class="left">
+                                                    <h2>Activités du compte</h2>
+                                                    <p>Toutes activités liées à votre compte</p>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                </div>
+                                            </div>
+
+                                            <div class="switcher">
+
+                                                <div class="left">
+                                                    <h2>Demande de cours</h2>
+                                                    <p>Être notifier sur les demandes des cours</p>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                </div>
+                                            </div>
+
+                                            <div class="switcher">
+
+                                                <div class="left">
+                                                    <h2>Offres concernant mes annonces</h2>
+                                                    <p>Alertes concernant les annonces succeptibles de vous intéresser</p>
+                                                </div>
+                                                <div class="form-check form-switch">
+                                                    <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                                                </div>
+                                            </div>
+
+                                            
+                                        </div>
+
+
+                                    </div>
+                                    <div class="info">
+                                        <div class="delete">
+                                            <div class="left">
+                                                <div class="image">
+                                                    <img src="/images/Student/compte/delete.svg" alt="">
+                                                </div>
+                                                <div>
+                                                    <h2>Suppression du compte</h2>
+                                                    <p>ATTENTION ! Toutes vos données seront supprimées définitivement<br>et de manière irréversible.</p>
+                                                </div>
+
+                                            </div>
+                                            <div class="button">
+                                                <button>Supprimer mon compte</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div  id="buttons">
+                                        <button>Mettre à jour</button>
+                                        <button>Annuler</button>
+                                    </div>
+
+
+                                </div>
+                
+                                <div class="swiper-slide slide">
+                                    <div class="card">
+                                        <img src="/images/Student/compte/facture.svg" alt="">
+                                        <h2>Aucune facture disponible !</h2>
+                                        <p>Vos factures s’afficheront ici une fois qu’un prélévement sera fait !</p>
+
+                                     </div>
+                    
+                
+                                </div>
+                                <div class="swiper-slide slide">
+                                    <div class="card">
+                                        <img src="/images/Student/compte/paiment.svg" alt="">
+                                        <h2>Aucun moyen de paiement !</h2>
+                                        <p>Afin de payer vos professeurs, vous devez enregistrer un moyen de paiement.</p>
+                                        <button>Ajouter un moyen de paiement</button>
+
+                                     </div>
+                
+                                </div>
+
+                                <div class="swiper-slide gifts">
+                                    <div class="card">
+                                        <h2>Offrez le cadeau idéal</h2>
+                                        <p>Vous avez la possibilité de choisir entre trois montants 500DH, 1 000DH ou 2 000 DH de cours avec l’ensemble des professeurs, coachs, artistes...</p>
+                                        <div class="boxs">
+                                            <div class="box">
+                                                <img src="/images/Student/compte/gift.svg" alt="">
+                                                <div class="price">
+                                                    <h3>500</h3>
+                                                    <h4 class="dh">DH</h4>
+
+                                                </div>
+                                                <p>500 DH de cours</p>
+                                                <button>offrir</button>
+                                            </div>
+                                            <div class="box">
+                                                <p class="plus">+ 50 DH Offert</p>
+                                                <img src="/images/Student/compte/gift.svg" alt="">
+                                                <div class="price">
+                                                    <h3>1000</h3>
+                                                    <h4 class="dh">DH</h4>
+                                                </div>
+                                                <p>1 000 DH de cours + 50 DH offerts</p>
+                                                <button>offrir</button>
+                                            </div>
+                                            <div class="box">
+                                                <p class="plus">+ 50 DH Offert</p>
+                                                <img src="/images/Student/compte/gift.svg" alt="">
+                                                <div class="price">
+                                                    <h3>2000</h3>
+                                                    <h4 class="dh">DH</h4>
+
+                                                </div>
+                                                <p>2 000 DH de cours + 100 DH offerts</p>
+                                                <button>offrir</button>
+                                            </div>
+                                        </div>
+
+                                     </div>
+                
+                                </div>
+                              
+                            </div>
+                        </div>   
+                    </div>
+
+                    <div class="right" >
+                        <!-- Slider main container -->
+                        <div class="swiper-container" style="width: 100%;">
+                        <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                            <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <div id="mise_a_jour">
+                                        <button >Mettre à jour</button>
+                                        <button >Annuler</button>
+                                    </div>
+                                        <div class="profile box">
+                                                <div class="image">
+                                                    <img src="/images/Student/dashboard/profile.svg" alt="">
+                                                </div>
+                                                    <h2>Photo de profil</h2>
+                                                    <p>Vos cours s’afficheront ici, demarrez par chercher le cours qui vous convient !</p>
+                                                    <button>Télécharger</button>
+                                        </div>
+                                        <div class="profile box">
+                                            <div class="image">
+                                                <img src="/images/Student/dashboard/Carte.svg" alt="">
+                                            </div>
+                                                <h2>Carte d’identité</h2>
+                                                <p>Vos cours s’afficheront ici, demarrez par chercher le cours qui vous convient !</p>
+                                                <button>Télécharger</button>
+                                    </div>
+                                    <div class="profile box">
+                                        <div class="image">
+                                            <img src="/images/Student/dashboard/diplôme.svg" alt="">
+                                        </div>
+                                            <h2>Diplôme</h2>
+                                            <p>Vos cours s’afficheront ici, demarrez par chercher le cours qui vous convient !</p>
+                                            <button>Télécharger</button>
+                                </div>
+                                        <!-- <div class="course">
+                                            <div class="text">
+                                                <h2>Cours à venir</h2>
+                                            </div>
+                                            <div class="container-course">
+                                                <div class="image">
+                                                    <img src="/images/Student/mescours/nextcourse.png" alt="">
+                                                    <h3>Fitness</h3>
+                                                    <p>9:00 — 10:00 - Webcam</p>
+                                                </div>
+                        
+                                                <div class="day">
+                                                    <div class="box">
+                                                        <h2>18</h2>
+                                                        <p>MAI</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                        </div> -->
+                                 </div>
+
+                                    <div class="swiper-slide">
+                                        <div id="mise_a_jour">
+                 
+                                        </div>
+                                        <div class="profile box">
+                                                <div class="image">
+                                                    <img src="/images/Student/dashboard/profile.svg" alt="">
+                                                </div>
+                                                    <h2>Complétez votre profil</h2>
+                                                    <p>Vos cours s’afficheront ici, demarrez par chercher le cours qui vous convient !</p>
+                                                    <button>Compléter mon profil</button>
+                                         </div>
+                                        <div class="course">
+                                            <div class="text">
+                                                <h2>Cours à venir</h2>
+                                            </div>
+                                            <div class="container-course">
+                                                <div class="image">
+                                                    <img src="/images/Student/mescours/nextcourse.png" alt="">
+                                                    <h3>Fitness</h3>
+                                                    <p>9:00 — 10:00 - Webcam</p>
+                                                </div>
+
+                                                <div class="day">
+                                                    <div class="box">
+                                                        <h2>18</h2>
+                                                        <p>MAI</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                            
+                                        </div>
+                                  </div>
+                                    <div class="swiper-slide">
+                                        <div id="mise_a_jour">
+                 
+                                        </div>
+
+                                                        <div class="profile box">
+                                                                <div class="image">
+                                                                    <img src="/images/Student/dashboard/profile.svg" alt="">
+                                                                </div>
+                                                                    <h2>Complétez votre profil</h2>
+                                                                    <p>Vos cours s’afficheront ici, demarrez par chercher le cours qui vous convient !</p>
+                                                                    <button>Compléter mon profil</button>
+                                                        </div>
+                                                        <div class="course">
+                                                            <div class="text">
+                                                                <h2>Cours à venir</h2>
+                                                            </div>
+                                                            <div class="container-course">
+                                                                <div class="image">
+                                                                    <img src="/images/Student/mescours/nextcourse.png" alt="">
+                                                                    <h3>Fitness</h3>
+                                                                    <p>9:00 — 10:00 - Webcam</p>
+                                                                </div>
+                                        
+                                                                <div class="day">
+                                                                    <div class="box">
+                                                                        <h2>18</h2>
+                                                                        <p>MAI</p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                            
+                                                        </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div id="mise_a_jour">
+                 
+                                            </div>
+
+                                            <div class="profile box">
+                                                    <div class="image">
+                                                        <img src="/images/Student/compte/gift2.svg" alt="">
+                                                    </div>
+                                                        <h2>Activez votre carte cadeau</h2>
+                                                        <p>Une fois votre carte achetée, renseignez le code reçu par mail sur votre profil ou envoyez le à l’heureux destinataire</p>
+                                                        <input type="text" placeholder="35142">
+                                                        <button id="gift2">Activer ma carte cadeau</button>
+                                            </div>
+                                            <div class="course">
+                                                <div class="text">
+                                                    <h2>Cours à venir</h2>
+                                                </div>
+                                                <div class="container-course">
+                                                    <div class="image">
+                                                        <img src="/images/Student/mescours/nextcourse.png" alt="">
+                                                        <h3>Fitness</h3>
+                                                        <p>9:00 — 10:00 - Webcam</p>
+                                                    </div>
+
+                                                    <div class="day">
+                                                        <div class="box">
+                                                            <h2>18</h2>
+                                                            <p>MAI</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                
+                                            </div>
+                                      </div>
+
+
+                    </div>
+
+                        </div>
+                 </div>
+
+                 </div>
+            </div>
+
+
+            </div>
+        </div>
+
+
+
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+
+
+<!-- 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" ></script>
+<script src="/js/Student/compte.js"></script>
+</body>
+</html>
